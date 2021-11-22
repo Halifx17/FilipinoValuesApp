@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FilipinoValuesApp</string>
+    <string name="intro1">Hello good day to you and today i will be your companion in exploring what values education is. . . </string>
+    <string name="intro2">In this application we will learn the importance of values in our lives</string>
+    <string name="intro3">By the way my name is Mary and I will be your teacher for this day.</string>
+    <string name="intro4">With that all out of the way let us now start!</string>
+
+</resources>

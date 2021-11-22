@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "361012201778",
+    "project_id": "filipinovaluesapp",
+    "storage_bucket": "filipinovaluesapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361012201778:android:13bfbc8e0a0ab449b6ef2b",
+        "android_client_info": {
+          "package_name": "com.example.filipinovaluesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361012201778-tclehdpmdsokamnkhi66atsv3lkaf9qc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO7GDPosHq0-QVdCLdZ69SgydZo7J-VJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361012201778-tclehdpmdsokamnkhi66atsv3lkaf9qc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
