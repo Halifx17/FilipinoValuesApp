@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FilipinoValuesApp">
         <activity
+            android:name=".StartGame"
+            android:exported="false" />
+        <activity
+            android:name=".three_in_one"
+            android:exported="false" />
+        <activity
             android:name=".Questionnaire"
             android:exported="false" />
         <activity

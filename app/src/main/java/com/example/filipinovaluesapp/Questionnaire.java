@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,18 +19,27 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Questionnaire extends AppCompatActivity {
 
-    TextView txtQuestion;
-    TextView txtChoice1;
-    TextView txtChoice2;
+    Button LetV, LetA, LetL, LetU, LetE;
+    TextView L1, L2, L3, L4, L5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire);
 
-        txtQuestion = findViewById(R.id.textQuestion);
-        txtChoice1 = findViewById(R.id.textChoice1);
-        txtChoice2 = findViewById(R.id.textChoice2);
+
+
+        LetV = findViewById(R.id.V);
+        LetA= findViewById(R.id.A);
+        LetL = findViewById(R.id.L);
+        LetU = findViewById(R.id.U);
+        LetE = findViewById(R.id.E);
+
+        L1 = findViewById(R.id.FirstLetter);
+        L2 = findViewById(R.id.SecondLetter);
+        L3 = findViewById(R.id.ThirdLetter);
+        L4 = findViewById(R.id.FourthLetter);
+        L5 = findViewById(R.id.FifthLetter);
 
     }
 
@@ -36,7 +47,152 @@ public class Questionnaire extends AppCompatActivity {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
+    public void setOpacityV(View view) {
+
+        LetV.getBackground().setAlpha(64);
+        LetV.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("V")&&
+                !L2.getText().equals("V")&&
+                !L3.getText().equals("V")&&
+                !L4.getText().equals("V")&&
+                !L5.getText().equals("V")) {
+
+            if (L1.getText().equals("_")) {
+                L1.setText("V");
+            } else if (L2.getText().equals("_")) {
+                L2.setText("V");
+            } else if (L3.getText().equals("_")) {
+                L3.setText("V");
+            } else if (L4.getText().equals("_")) {
+                L4.setText("V");
+            } else {
+                L5.setText("V");
+            }
+        }
+    }
 
 
+    public void setOpacityA(View view) {
 
+        LetA.getBackground().setAlpha(64);
+        LetA.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("A")&&
+                !L2.getText().equals("A")&&
+                !L3.getText().equals("A")&&
+                !L4.getText().equals("A")&&
+                !L5.getText().equals("A")) {
+
+            if (L1.getText().equals("_")) {
+                L1.setText("A");
+            } else if (L2.getText().equals("_")) {
+                L2.setText("A");
+            } else if (L3.getText().equals("_")) {
+                L3.setText("A");
+            } else if (L4.getText().equals("_")) {
+                L4.setText("A");
+            } else {
+                L5.setText("A");
+            }
+        }
+    }
+
+
+    public void setOpacityL(View view) {
+
+        LetL.getBackground().setAlpha(64);
+        LetL.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("L")&&
+                !L2.getText().equals("L")&&
+                !L3.getText().equals("L")&&
+                !L4.getText().equals("L")&&
+                !L5.getText().equals("L")) {
+
+            if (L1.getText().equals("_")) {
+                L1.setText("L");
+            } else if (L2.getText().equals("_")) {
+                L2.setText("L");
+            } else if (L3.getText().equals("_")) {
+                L3.setText("L");
+            } else if (L4.getText().equals("_")) {
+                L4.setText("L");
+            } else {
+                L5.setText("L");
+            }
+        }
+
+    }
+    public void setOpacityU(View view) {
+
+        LetU.getBackground().setAlpha(64);
+        LetU.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("U")&&
+                !L2.getText().equals("U")&&
+                !L3.getText().equals("U")&&
+                !L4.getText().equals("U")&&
+                !L5.getText().equals("U")) {
+
+            if (L1.getText().equals("_")) {
+                L1.setText("U");
+            } else if (L2.getText().equals("_")) {
+                L2.setText("U");
+            } else if (L3.getText().equals("_")) {
+                L3.setText("U");
+            } else if (L4.getText().equals("_")) {
+                L4.setText("U");
+            } else {
+                L5.setText("U");
+            }
+        }
+
+    }
+
+
+    public void setOpacityE(View view) {
+
+        LetE.getBackground().setAlpha(64);
+        LetE.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("E")&&
+                !L2.getText().equals("E")&&
+                !L3.getText().equals("E")&&
+                !L4.getText().equals("E")&&
+                !L5.getText().equals("E")) {
+
+            if (L1.getText().equals("_")) {
+                L1.setText("E");
+            } else if (L2.getText().equals("_")) {
+                L2.setText("E");
+            } else if (L3.getText().equals("_")) {
+                L3.setText("E");
+            } else if (L4.getText().equals("_")) {
+                L4.setText("E");
+            } else {
+                L5.setText("E");
+            }
+        }
+
+    }
+
+    public void resetLetters(View view) {
+
+        LetV.getBackground().setAlpha(255);
+        LetV.setTextColor(Color.parseColor("#FFFFFFFF"));
+
+        LetA.getBackground().setAlpha(255);
+        LetA.setTextColor(Color.parseColor("#FFFFFFFF"));
+
+        LetL.getBackground().setAlpha(255);
+        LetL.setTextColor(Color.parseColor("#FFFFFFFF"));
+
+        LetU.getBackground().setAlpha(255);
+        LetU.setTextColor(Color.parseColor("#FFFFFFFF"));
+
+        LetE.getBackground().setAlpha(255);
+        LetE.setTextColor(Color.parseColor("#FFFFFFFF"));
+
+        L1.setText("_");
+        L2.setText("_");
+        L3.setText("_");
+        L4.setText("_");
+        L5.setText("_");
+    }
 }

@@ -5,15 +5,21 @@
       <map>
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/drawable/back.xml" value="0.3828125" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/drawable/ic_back_arrow.xml" value="0.3828125" />
+        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/drawable/round_button.xml" value="0.3828125" />
+        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/drawable/round_textfields.xml" value="0.3828125" />
+        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/drawable/round_textlayout.xml" value="0.3828125" />
+        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/drawable/tio_login.xml" value="0.3828125" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_introduction.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_introduction2.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_introduction3.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_introduction4.xml" value="0.36666666666666664" />
-        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_log_in.xml" value="0.36666666666666664" />
-        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_log_in.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_questionnaire.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_registration.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_settings.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_start_game.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_three_in_one.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

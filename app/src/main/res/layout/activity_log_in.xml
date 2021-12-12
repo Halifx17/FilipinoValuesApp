@@ -6,12 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".LogIn">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_img"
+        android:scaleType="fitXY">
+
+    </ImageView>
+
     <TextView
         android:id="@+id/LogIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
-        android:text="Welcome"
+        android:text="VALUES QUIZ"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -26,15 +35,21 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
         android:hint="Email"
+        app:errorTextColor="@color/orange"
+        app:hintTextColor="@color/black"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LogIn">
+        app:layout_constraintTop_toBottomOf="@+id/LogIn"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/LogIn_Edit_Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:background="@drawable/round_textfields"
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -46,6 +61,9 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
         android:hint="Password"
+        app:errorEnabled="true"
+        app:hintTextColor="@color/black"
+        app:errorTextColor="@color/orange"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,17 +73,24 @@
             android:id="@+id/LogIn_Edit_Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:background="@drawable/round_textfields"/>
+
+
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/LogInButton"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
         android:text="Log In"
         android:onClick="LogIn"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@drawable/tio_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,8 +101,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:textSize="20dp"
         android:onClick="guestButton"
-        android:text="Enter as a Guest."
+        android:text="Enter as a GUEST."
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LogInButton" />
@@ -88,7 +115,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:onClick="registerButton"
-        android:text="Not yet a user? Register."
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="Not yet a user? REGISTER."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LogInButton" />
