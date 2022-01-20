@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Questionnaire3">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/Background"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_img"/>
+
+    <ImageButton
+        android:id="@+id/image_menu"
+        android:layout_width="55dp"
+        android:layout_height="43dp"
+        android:onClick="settingsButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_menu"
+        android:contentDescription="@string/Hamburger"/>
+
+    <TextView
+        android:id="@+id/intro_title"
+        android:layout_width="324dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:text="@string/ValuesQuiz"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/image_menu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/Question3"
+        android:textAlignment="center"
+        android:background="@drawable/textview_round"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro_title" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/EditText_Answer"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:hint="@string/Answer"
+        app:hintTextColor="@color/black"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/orange"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Edit_Answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_textfields"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/questionnaire_buttons"
+        android:onClick="nextButton1"
+        android:text="@string/Next"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/EditText_Answer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

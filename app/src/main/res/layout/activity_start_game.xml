@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/bg_img">
+        android:src="@drawable/bg_img"
+        android:contentDescription="@string/Background">
 
     </ImageView>
 
@@ -21,10 +22,9 @@
         android:layout_height="80dp"
         android:layout_marginTop="128dp"
         android:background="@drawable/tio_login"
-        android:text="Start Game"
+        android:text="@string/StartGame"
         android:textColor="@color/white"
-        android:textSize="35dp"
-        android:foreground="?attr/selectableItemBackground"
+        android:textSize="35sp"
         android:onClick="gameStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,10 +36,9 @@
         android:layout_height="35dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
-        android:text="Leaderboards"
+        android:text="@string/Leaderboards"
         android:textColor="@color/white"
-        android:textSize="20dp"
-        android:foreground="?attr/selectableItemBackground"
+        android:textSize="20sp"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="@+id/Leaderboards"
         app:layout_constraintStart_toStartOf="@+id/Leaderboards"
@@ -51,11 +50,10 @@
         android:layout_height="35dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
-        android:text="How to Play"
+        android:text="@string/HowToPlay"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textAllCaps="false"
-        android:foreground="?attr/selectableItemBackground"
         app:layout_constraintEnd_toEndOf="@+id/startGame"
         app:layout_constraintStart_toStartOf="@+id/startGame"
         app:layout_constraintTop_toBottomOf="@+id/startGame" />

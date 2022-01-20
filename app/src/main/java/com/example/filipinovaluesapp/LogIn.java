@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,6 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LogIn extends AppCompatActivity {
 
     EditText editEmail, editPassword;
+    TextView guest, register;
     TextInputLayout editTextEmail, editTextPassword;
     FirebaseAuth mAuth;
     Button LogInButton;
@@ -38,6 +40,47 @@ public class LogIn extends AppCompatActivity {
         LogInButton = findViewById(R.id.LogInButton);
 
         mAuth = FirebaseAuth.getInstance();
+
+        guest = (TextView) findViewById(R.id.guest);
+        register = (TextView) findViewById(R.id.register);
+
+        guest.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+
+
+                if(MotionEvent.ACTION_DOWN == motionEvent.getAction()) {
+                    view.getBackground().setAlpha(128);
+
+                }else if(MotionEvent.ACTION_UP == motionEvent.getAction()) {
+                    view.getBackground().setAlpha(255);
+
+
+                }
+
+
+                return false;
+            }
+        });
+
+        register.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+
+
+                if(MotionEvent.ACTION_DOWN == motionEvent.getAction()) {
+                    view.getBackground().setAlpha(128);
+
+                }else if(MotionEvent.ACTION_UP == motionEvent.getAction()) {
+                    view.getBackground().setAlpha(255);
+
+
+                }
+
+
+                return false;
+            }
+        });
 
 
 

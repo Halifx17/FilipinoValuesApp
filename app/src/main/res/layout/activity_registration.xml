@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/bg_img">
+        android:src="@drawable/bg_img"
+        android:contentDescription="@string/Background">
 
     </ImageView>
 
@@ -20,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Registration"
+        android:text="@string/Registration"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,8 +36,11 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="64dp"
-        android:hint="Username"
+        android:hint="@string/Username"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:errorEnabled="true"
+        app:hintTextColor="@color/black"
         app:errorTextColor="@color/orange"
         app:helperTextEnabled="true"
         app:helperText="Maximum of 8 characters"
@@ -50,7 +54,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLength="8"
-            android:background="@drawable/round_textfields"/>
+            android:background="@drawable/round_textfields"
+            android:textColor="@color/black"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -61,7 +66,10 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
-        android:hint="Email"
+        android:hint="@string/Email"
+        app:hintTextColor="@color/black"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:errorTextColor="@color/orange"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +80,8 @@
             android:id="@+id/Edit_Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/round_textfields"/>
+            android:background="@drawable/round_textfields"
+            android:textColor="@color/black"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,7 +92,10 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
-        android:hint="Password"
+        android:hint="@string/Password"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/black"
+        app:boxStrokeWidthFocused="0dp"
         app:errorTextColor="@color/orange"
         app:errorEnabled="true"
         app:endIconMode="password_toggle"
@@ -92,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/EditText_Email"
         app:helperTextEnabled="true"
         app:helperTextTextColor="@color/orange"
-        app:helperText="Minimum of 6 characters">>
+        app:helperText="Minimum of 6 characters">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/Edit_Password"
@@ -100,6 +112,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:background="@drawable/round_textfields"
+            android:textColor="@color/black"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -111,21 +124,25 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="64dp"
-        android:hint="Re-type password"
+        android:hint="@string/RetypePassword"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:errorTextColor="@color/orange"
         app:errorEnabled="true"
+        app:hintTextColor="@color/black"
         app:endIconMode="password_toggle"
         app:helperTextEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditText_Password">>
+        app:layout_constraintTop_toBottomOf="@+id/EditText_Password">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/Edit_RetypePassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:background="@drawable/round_textfields"/>
+            android:background="@drawable/round_textfields"
+            android:textColor="@color/black"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,10 +151,9 @@
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:onClick="registerFirebase"
-        android:text="Register"
-        android:foreground="?attr/selectableItemBackground"
+        android:text="@string/Register"
         android:textColor="@color/white"
         android:background="@drawable/tio_login"
         app:layout_constraintEnd_toEndOf="parent"

@@ -7,10 +7,12 @@
     tools:context=".Questionnaire">
 
     <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/bg_img"
-        android:scaleType="fitXY">
+        android:contentDescription="@string/Background"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_img">
 
     </ImageView>
 
@@ -21,14 +23,15 @@
         android:onClick="settingsButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_menu" />
+        app:srcCompat="@drawable/ic_menu"
+        android:contentDescription="@string/Hamburger"/>
 
     <TextView
         android:id="@+id/intro_title"
         android:layout_width="324dp"
         android:layout_height="43dp"
         android:gravity="center"
-        android:text="Teaching Values App"
+        android:text="@string/ValuesQuiz"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -42,11 +45,10 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
-        android:text="U"
-        android:foreground="?attr/selectableItemBackground"
+        android:text="@string/U"
         android:onClick="setOpacityU"
         android:textColor="@color/white"
-        android:textSize="50dp"
+        android:textSize="50sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -55,9 +57,11 @@
         android:layout_width="350dp"
         android:layout_height="120dp"
         android:layout_marginTop="32dp"
-        android:text="@string/Question1"
-        android:background="@color/white"
+        android:text="@string/Question"
+        android:background="@drawable/textview_round"
         android:padding="20dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/intro_title" />
@@ -69,11 +73,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
-        android:text="V"
+        android:text="@string/V"
         android:onClick="setOpacityV"
-        android:foreground="?attr/selectableItemBackground"
         android:textColor="@color/white"
-        android:textSize="50dp"
+        android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/U"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -84,11 +87,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
-        android:text="E"
+        android:text="@string/E"
         android:onClick="setOpacityE"
-        android:foreground="?attr/selectableItemBackground"
         android:textColor="@color/white"
-        android:textSize="50dp"
+        android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/V"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -99,11 +101,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
-        android:text="A"
+        android:text="@string/A"
         android:onClick="setOpacityA"
-        android:foreground="?attr/selectableItemBackground"
         android:textColor="@color/white"
-        android:textSize="50dp"
+        android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/E"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -114,11 +115,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
-        android:text="L"
-        android:foreground="?attr/selectableItemBackground"
+        android:text="@string/L"
         android:onClick="setOpacityL"
         android:textColor="@color/white"
-        android:textSize="50dp"
+        android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/A"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -127,9 +127,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="_"
+        android:text="@string/underscore"
         android:textColor="@color/white"
-        android:textSize="50dp"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@+id/U"
         app:layout_constraintStart_toStartOf="@+id/U"
         app:layout_constraintTop_toBottomOf="@+id/U" />
@@ -139,9 +139,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="_"
+        android:text="@string/underscore"
         android:textColor="@color/white"
-        android:textSize="50dp"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@+id/V"
         app:layout_constraintStart_toStartOf="@+id/V"
         app:layout_constraintTop_toBottomOf="@+id/V" />
@@ -151,9 +151,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="_"
+        android:text="@string/underscore"
         android:textColor="@color/white"
-        android:textSize="50dp"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@+id/E"
         app:layout_constraintStart_toStartOf="@+id/E"
         app:layout_constraintTop_toBottomOf="@+id/E" />
@@ -163,9 +163,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="_"
+        android:text="@string/underscore"
         android:textColor="@color/white"
-        android:textSize="50dp"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@+id/A"
         app:layout_constraintStart_toStartOf="@+id/A"
         app:layout_constraintTop_toBottomOf="@+id/A" />
@@ -175,9 +175,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="_"
+        android:text="@string/underscore"
         android:textColor="@color/white"
-        android:textSize="50dp"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@+id/L"
         app:layout_constraintStart_toStartOf="@+id/L"
         app:layout_constraintTop_toBottomOf="@+id/L" />
@@ -186,14 +186,36 @@
         android:id="@+id/resetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="52dp"
+        android:background="@drawable/questionnaire_buttons"
         android:onClick="resetLetters"
+        android:text="@string/Reset"
         android:textColor="@color/white"
-        android:background="@drawable/tio_login"
-        android:text="Reset"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/FirstLetter" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/questionnaire_buttons"
+        android:onClick="nextButton"
+        android:text="@string/Next"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/FifthLetter" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

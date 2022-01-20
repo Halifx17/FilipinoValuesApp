@@ -4,6 +4,51 @@
     <string name="intro2">In this application we will learn the importance of values in our lives</string>
     <string name="intro3">By the way my name is Mary and I will be your teacher for this day.</string>
     <string name="intro4">With that all out of the way let us now start!</string>
-    <string name="Question1">This word is derived from the Latin word "valere" which means to be worth, be strong-something intrinsically valuable, or desirable.</string>
+
+
+
+    <string name="Question">This word is derived from the Latin word "valere" which means to be worth, be strong-something intrinsically valuable, or desirable.</string>
+    <string name="Question1">This refers to the ability of Filipinos to shed light and optimism in whatever situation they are in so as to remain determined in going through struggles and challenges.</string>
+    <string name="Question2">WHICH DOES NOT BELONG.\nAll of the following are the strengths of the Filipino Character EXCEPT:</string>
+    <string name="Question3">_______ means daring to attempt difficult things that are good.\n\n C _ _ R _ _ E</string>
+
+
+
+    <string name="JoyAndHumor">Joy and Humor</string>
+    <string name="Unselfishness">Unselfishness</string>
+    <string name="SelfDiscipline">Self Discipline</string>
+    <string name="Love">Love</string>
+    <string name="Flex_Adapt_Create">Flexibility, Adaptability, Creativity</string>
+    <string name="Hard_work">Hard work and Industry</string>
+    <string name="Faith">Faith and Religiosity</string>
+    <string name="Friend">Friend Orientation</string>
+
+
+    <string name="underscore">_</string>
+    <string name="ValuesQuiz">Values Quiz</string>
+    <string name="Email">Email</string>
+    <string name="Background">Background image</string>
+    <string name="Hamburger">Hamburger Menu</string>
+    <string name="Password">Password</string>
+    <string name="LogIn">Log In</string>
+    <string name="EnterAsGuest">Enter as GUEST</string>
+    <string name="NotYetReg">Not yet a user? REGISTER</string>
+    <string name="TeachingValuesApp">Teaching Values Application</string>
+    <string name="Reset">Reset</string>
+    <string name="Registration">Registration</string>
+    <string name="Register">Register</string>
+    <string name="Username">Username</string>
+    <string name="RetypePassword">Re-type password</string>
+    <string name="StartGame">Start Game</string>
+    <string name="Leaderboards">Leaderboards</string>
+    <string name="HowToPlay">How to Play</string>
+    <string name="WelcomeTo">Welcome to</string>
+    <string name="Next">Next</string>
+    <string name="Answer">Answer</string>
+    <string name="V">V</string>
+    <string name="A">A</string>
+    <string name="L">L</string>
+    <string name="U">U</string>
+    <string name="E">E</string>
 
 </resources>

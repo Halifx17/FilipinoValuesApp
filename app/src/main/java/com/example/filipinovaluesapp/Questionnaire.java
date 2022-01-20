@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,13 +21,20 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Questionnaire extends AppCompatActivity {
 
-    Button LetV, LetA, LetL, LetU, LetE;
+    Button LetV, LetA, LetL, LetU, LetE, nextButton, resetButton;
     TextView L1, L2, L3, L4, L5;
+    int Time = 0;
+    String strTime;
+    public Chronometer chronometer;
+    private boolean running;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire);
+
+        nextButton = findViewById(R.id.nextButton);
+        resetButton = findViewById(R.id.resetButton);
 
 
 
@@ -41,6 +50,70 @@ public class Questionnaire extends AppCompatActivity {
         L4 = findViewById(R.id.FourthLetter);
         L5 = findViewById(R.id.FifthLetter);
 
+        chronometer = findViewById(R.id.chronometer);
+
+        chronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
+            @Override
+            public void onChronometerTick(Chronometer chronometer) {
+                Time++;
+            }
+        });
+
+
+        nextButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+
+                if(MotionEvent.ACTION_DOWN == motionEvent.getAction()) {
+                    view.getBackground().setAlpha(128);
+
+                }else if(MotionEvent.ACTION_UP == motionEvent.getAction()) {
+                    view.getBackground().setAlpha(255);
+
+
+                }
+
+                return false;
+            }
+        });
+
+        resetButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+
+                if(MotionEvent.ACTION_DOWN == motionEvent.getAction()) {
+                    view.getBackground().setAlpha(128);
+
+                }else if(MotionEvent.ACTION_UP == motionEvent.getAction()) {
+                    view.getBackground().setAlpha(255);
+
+
+                }
+
+                return false;
+            }
+        });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        chronometer.start();
+    }
+
+    public void startChronometer(View view){
+        if(!running){
+            chronometer.start();
+            running = true;
+        }
+    }
+
+    public void pauseChronometer(View view){
+        if(running){
+            chronometer.stop();
+            running = false;
+        }
     }
 
     public void settingsButton(View view) {
@@ -194,5 +267,15 @@ public class Questionnaire extends AppCompatActivity {
         L3.setText("_");
         L4.setText("_");
         L5.setText("_");
+
+        strTime = Integer.toString(Time);
+
+        Toast.makeText(Questionnaire.this,strTime,Toast.LENGTH_SHORT).show();
+    }
+
+    public void nextButton(View view) {
+
+        Intent intent = new Intent(Questionnaire.this,Questionnaire1.class);
+        startActivity(intent);
     }
 }

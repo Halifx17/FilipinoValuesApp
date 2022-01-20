@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/bg_img"
-        android:scaleType="fitXY">
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Background">
 
     </ImageView>
 
@@ -19,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
-        android:text="VALUES QUIZ"
+        android:text="@string/ValuesQuiz"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +35,9 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
-        android:hint="Email"
+        android:hint="@string/Email"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:errorTextColor="@color/orange"
         app:hintTextColor="@color/black"
         app:errorEnabled="true"
@@ -49,6 +52,7 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:background="@drawable/round_textfields"
+            android:textColor="@color/black"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -60,8 +64,10 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
-        android:hint="Password"
+        android:hint="@string/Password"
         app:errorEnabled="true"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:hintTextColor="@color/black"
         app:errorTextColor="@color/orange"
         app:endIconMode="password_toggle"
@@ -74,7 +80,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:background="@drawable/round_textfields"/>
+            android:background="@drawable/round_textfields"
+            android:textColor="@color/black"/>
 
 
 
@@ -86,10 +93,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:textColor="@color/white"
-        android:textSize="20dp"
-        android:text="Log In"
+        android:textSize="20sp"
+        android:text="@string/LogIn"
         android:onClick="LogIn"
-        android:foreground="?attr/selectableItemBackground"
         android:background="@drawable/tio_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -98,12 +104,14 @@
 
     <TextView
         android:id="@+id/guest"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:textSize="20dp"
+        android:textSize="20sp"
+        android:textAlignment="center"
         android:onClick="guestButton"
-        android:text="Enter as a GUEST."
+        android:background="@drawable/questionnaire_buttons"
+        android:text="@string/EnterAsGuest"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,13 +119,15 @@
 
     <TextView
         android:id="@+id/register"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:onClick="registerButton"
         android:textColor="@color/white"
-        android:textSize="20dp"
-        android:text="Not yet a user? REGISTER."
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:background="@drawable/questionnaire_buttons"
+        android:text="@string/NotYetReg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LogInButton" />
