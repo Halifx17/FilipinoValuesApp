@@ -85,4 +85,8 @@ public class StartGame extends AppCompatActivity {
     }
 
 
+    public void howToPlay(View view) {
+        Intent intent = new Intent(StartGame.this,HowToPlay.class);
+        startActivity(intent);
+    }
 }

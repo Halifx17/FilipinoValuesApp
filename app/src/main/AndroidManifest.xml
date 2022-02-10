@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FilipinoValuesApp">
         <activity
+            android:name=".Score"
+            android:exported="false" />
+        <activity
+            android:name=".HowToPlay"
+            android:exported="false" />
+        <activity
             android:name=".Questionnaire3"
             android:exported="false" />
         <activity
@@ -28,15 +34,6 @@
             android:name=".Questionnaire"
             android:exported="false" />
         <activity
-            android:name=".Introduction4"
-            android:exported="false" />
-        <activity
-            android:name=".Introduction3"
-            android:exported="false" />
-        <activity
-            android:name=".Introduction2"
-            android:exported="false" />
-        <activity
             android:name=".Registration"
             android:exported="false" />
         <activity
@@ -44,9 +41,6 @@
             android:exported="false" />
         <activity
             android:name=".Settings"
-            android:exported="false" />
-        <activity
-            android:name=".Introduction"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

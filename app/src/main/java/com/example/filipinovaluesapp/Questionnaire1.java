@@ -5,13 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Chronometer;
+import android.widget.Toast;
 
 public class Questionnaire1 extends AppCompatActivity {
 
     Button choiceOne, choiceTwo, choiceThree, choiceFour, nextButton;
+    int Time = 0;
+    long previousTime;
+    String strTime;
+    public Chronometer chronometer;
+    private boolean running;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +32,11 @@ public class Questionnaire1 extends AppCompatActivity {
         choiceTwo = findViewById(R.id.Choice2);
         choiceThree = findViewById(R.id.Choice3);
         choiceFour = findViewById(R.id.Choice4);
+
+        previousTime = getIntent().getExtras().getLong("prevTime");
+
+        chronometer = findViewById(R.id.chronometer);
+
 
         nextButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -41,6 +54,27 @@ public class Questionnaire1 extends AppCompatActivity {
                 return false;
             }
         });
+
+    }
+
+    protected void onStart() {
+        super.onStart();
+        chronometer.setBase(SystemClock.elapsedRealtime() - previousTime);
+        chronometer.start();
+    }
+
+    public void startChronometer(View view){
+        if(!running){
+            chronometer.start();
+            running = true;
+        }
+    }
+
+    public void pauseChronometer(View view){
+        if(running){
+            chronometer.stop();
+            running = false;
+        }
     }
 
     public void clearSelection(){
@@ -107,8 +141,9 @@ public class Questionnaire1 extends AppCompatActivity {
     }
 
     public void nextButton1(View view) {
-
+        long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
         Intent intent = new Intent(Questionnaire1.this,Questionnaire2.class);
+        intent.putExtra("prevTime1",elapsedMillis);
         startActivity(intent);
     }
 }

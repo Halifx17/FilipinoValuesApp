@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -52,13 +54,6 @@ public class Questionnaire extends AppCompatActivity {
 
         chronometer = findViewById(R.id.chronometer);
 
-        chronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
-            @Override
-            public void onChronometerTick(Chronometer chronometer) {
-                Time++;
-            }
-        });
-
 
         nextButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -98,6 +93,7 @@ public class Questionnaire extends AppCompatActivity {
 
     @Override
     protected void onStart() {
+        chronometer.setBase(SystemClock.elapsedRealtime());
         super.onStart();
         chronometer.start();
     }
@@ -268,14 +264,14 @@ public class Questionnaire extends AppCompatActivity {
         L4.setText("_");
         L5.setText("_");
 
-        strTime = Integer.toString(Time);
 
-        Toast.makeText(Questionnaire.this,strTime,Toast.LENGTH_SHORT).show();
     }
 
     public void nextButton(View view) {
 
+        long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
         Intent intent = new Intent(Questionnaire.this,Questionnaire1.class);
+        intent.putExtra("prevTime",elapsedMillis);
         startActivity(intent);
     }
 }

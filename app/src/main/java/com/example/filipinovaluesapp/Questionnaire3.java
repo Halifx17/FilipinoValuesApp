@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -14,6 +16,11 @@ public class Questionnaire3 extends AppCompatActivity {
 
     Button nextButton;
     EditText editAnswer;
+    int Time = 0;
+    long previousTime;
+    String strTime;
+    public Chronometer chronometer;
+    private boolean running;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,16 +30,9 @@ public class Questionnaire3 extends AppCompatActivity {
         nextButton = findViewById(R.id.nextButton);
         editAnswer = findViewById(R.id.Edit_Answer);
 
+        previousTime = getIntent().getExtras().getLong("prevTime2");
 
-
-
-
-
-
-
-
-
-
+        chronometer = findViewById(R.id.chronometer);
 
 
 
@@ -54,6 +54,26 @@ public class Questionnaire3 extends AppCompatActivity {
         });
     }
 
+    protected void onStart() {
+        super.onStart();
+        chronometer.setBase(SystemClock.elapsedRealtime() - previousTime);
+        chronometer.start();
+    }
+
+    public void startChronometer(View view){
+        if(!running){
+            chronometer.start();
+            running = true;
+        }
+    }
+
+    public void pauseChronometer(View view){
+        if(running){
+            chronometer.stop();
+            running = false;
+        }
+    }
+
 
 
 
@@ -64,14 +84,16 @@ public class Questionnaire3 extends AppCompatActivity {
 
     public void nextButton1(View view) {
 
-        Intent intent = new Intent(Questionnaire3.this,Questionnaire3.class);
-        startActivity(intent);
-
         String answer;
 
         answer = editAnswer.getText().toString().trim();
 
         Toast.makeText(Questionnaire3.this,answer,Toast.LENGTH_SHORT).show();
+
+        long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
+        Intent intent = new Intent(Questionnaire3.this,Score.class);
+        intent.putExtra("prevTime3",elapsedMillis);
+        startActivity(intent);
 
     }
 

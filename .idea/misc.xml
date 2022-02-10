@@ -12,6 +12,7 @@
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/drawable/round_textlayout.xml" value="0.3828125" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/drawable/textview_round.xml" value="0.3828125" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/drawable/tio_login.xml" value="0.3828125" />
+        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_how_to_play.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_introduction.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_introduction2.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_introduction3.xml" value="0.36666666666666664" />
@@ -23,8 +24,9 @@
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_questionnaire2.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_questionnaire3.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_registration.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_score.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_settings.xml" value="0.36666666666666664" />
-        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_start_game.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_start_game.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/layout/activity_three_in_one.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3828125" />
         <entry key="..\:/AndroidStudioProjects/FilipinoValuesApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22135416666666666" />
