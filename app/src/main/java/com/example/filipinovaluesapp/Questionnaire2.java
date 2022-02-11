@@ -2,6 +2,7 @@ package com.example.filipinovaluesapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,11 +11,16 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.Toast;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
+import java.util.ArrayList;
 
 public class Questionnaire2 extends AppCompatActivity {
 
     Button q2Choice1, q2Choice2, q2Choice3, q2Choice4, nextButton;
-    int Time = 0;
+    int Time = 0, score = 0, answer = 0, notAnswered = 1, seedOrder = 0;
     long previousTime;
     String strTime;
     public Chronometer chronometer;
@@ -33,7 +39,7 @@ public class Questionnaire2 extends AppCompatActivity {
         q2Choice3 = findViewById(R.id.q2Choice3);
         q2Choice4 = findViewById(R.id.q2Choice4);
 
-        previousTime = getIntent().getExtras().getLong("prevTime1");
+        previousTime = getIntent().getExtras().getLong("prevTime");
 
         chronometer = findViewById(R.id.chronometer);
 
@@ -54,6 +60,30 @@ public class Questionnaire2 extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(Questionnaire2.this);
+
+        builder.setTitle("Do you want to return to Home Screen?");
+        builder.setMessage("Your Progress Will Be Lost!");
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent intent = new Intent(Questionnaire2.this, StartGame.class);
+                startActivity(intent);
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+
+        builder.show();
+
     }
 
     protected void onStart() {
@@ -87,6 +117,10 @@ public class Questionnaire2 extends AppCompatActivity {
         q2Choice3.setTextColor(Color.parseColor("#FFFFFFFF"));
         q2Choice4.getBackground().setAlpha(255);
         q2Choice4.setTextColor(Color.parseColor("#FFFFFFFF"));
+        answer = 0;
+        notAnswered = 1;
+
+
     }
 
     public void settingsButton(View view) {
@@ -105,6 +139,8 @@ public class Questionnaire2 extends AppCompatActivity {
         q2Choice3.setTextColor(Color.parseColor("#778899"));
         q2Choice4.getBackground().setAlpha(64);
         q2Choice4.setTextColor(Color.parseColor("#778899"));
+        answer = 0;
+        notAnswered = 0;
     }
 
     public void MCQ2(View view) {
@@ -117,6 +153,8 @@ public class Questionnaire2 extends AppCompatActivity {
         q2Choice3.setTextColor(Color.parseColor("#778899"));
         q2Choice4.getBackground().setAlpha(64);
         q2Choice4.setTextColor(Color.parseColor("#778899"));
+        answer = 0;
+        notAnswered = 0;
 
     }
 
@@ -128,6 +166,8 @@ public class Questionnaire2 extends AppCompatActivity {
         q2Choice2.setTextColor(Color.parseColor("#778899"));
         q2Choice4.getBackground().setAlpha(64);
         q2Choice4.setTextColor(Color.parseColor("#778899"));
+        answer = 1;
+        notAnswered = 0;
     }
 
     public void MCQ4(View view) {
@@ -138,13 +178,79 @@ public class Questionnaire2 extends AppCompatActivity {
         q2Choice3.setTextColor(Color.parseColor("#778899"));
         q2Choice2.getBackground().setAlpha(64);
         q2Choice2.setTextColor(Color.parseColor("#778899"));
+        answer = 0;
+        notAnswered = 0;
     }
 
     public void nextButton1(View view) {
-        long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
-        Intent intent = new Intent(Questionnaire2.this,Questionnaire3.class);
-        intent.putExtra("prevTime2",elapsedMillis);
-        startActivity(intent);
+        score = getIntent().getIntExtra("runningScore", 0);
+        ArrayList<Integer> seed = getIntent().getIntegerArrayListExtra("seed");
+        seedOrder = getIntent().getIntExtra("seedOrder", 0);
+
+        if(seedOrder+1 >= 5){
+            Intent intent = new Intent(Questionnaire2.this, Score.class);
+            if (answer == 1) {
+
+                intent.putExtra("runningScore", score);
+            } else if(notAnswered == 1){
+                intent.putExtra("runningScore", score-2500);
+            }else {
+                intent.putExtra("runningScore", score-2500);
+            }
+            long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
+            intent.putExtra("prevTime", elapsedMillis);
+            intent.putExtra("seedOrder", seedOrder + 1);
+            intent.putIntegerArrayListExtra("seed", seed);
+            startActivity(intent);
+        }
+
+        else if (seed.get(seedOrder) == 1) {
+            Intent intent = new Intent(Questionnaire2.this, Questionnaire.class);
+            if (answer == 1) {
+
+                intent.putExtra("runningScore", score);
+            } else if(notAnswered == 1){
+                intent.putExtra("runningScore", score-2500);
+            }else {
+                intent.putExtra("runningScore", score-2500);
+            }
+            long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
+            intent.putExtra("prevTime", elapsedMillis);
+            intent.putExtra("seedOrder", seedOrder + 1);
+            intent.putIntegerArrayListExtra("seed", seed);
+            startActivity(intent);
+        } else if (seed.get(seedOrder) == 2) {
+            Intent intent = new Intent(Questionnaire2.this, Questionnaire1.class);
+            if (answer == 1) {
+
+                intent.putExtra("runningScore", score);
+            } else if(notAnswered == 1){
+                intent.putExtra("runningScore", score-2500);
+            }else {
+                intent.putExtra("runningScore", score-2500);
+            }
+            long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
+            intent.putExtra("prevTime", elapsedMillis);
+            intent.putExtra("seedOrder", seedOrder + 1);
+            intent.putIntegerArrayListExtra("seed", seed);
+            startActivity(intent);
+        }
+        else if (seed.get(seedOrder) == 4) {
+            Intent intent = new Intent(Questionnaire2.this, Questionnaire3.class);
+            if (answer == 1) {
+
+                intent.putExtra("runningScore", score);
+            } else if(notAnswered == 1){
+                intent.putExtra("runningScore", score-2500);
+            }else {
+                intent.putExtra("runningScore", score-2500);
+            }
+            long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
+            intent.putExtra("prevTime", elapsedMillis);
+            intent.putExtra("seedOrder", seedOrder + 1);
+            intent.putIntegerArrayListExtra("seed", seed);
+            startActivity(intent);
+        }
     }
 }
 

@@ -37,6 +37,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
         android:text="@string/Leaderboards"
+        android:onClick="leaderBoards"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textAllCaps="false"

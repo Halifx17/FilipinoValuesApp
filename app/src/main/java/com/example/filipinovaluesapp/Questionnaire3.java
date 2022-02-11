@@ -2,6 +2,7 @@ package com.example.filipinovaluesapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -12,13 +13,17 @@ import android.widget.Chronometer;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
+import java.util.ArrayList;
+
 public class Questionnaire3 extends AppCompatActivity {
 
     Button nextButton;
     EditText editAnswer;
-    int Time = 0;
+    int Time = 0, score = 0, answer = 0, notAnswered = 1, seedOrder = 0;
     long previousTime;
-    String strTime;
+    String strTime, txtAnswer;
     public Chronometer chronometer;
     private boolean running;
 
@@ -30,7 +35,7 @@ public class Questionnaire3 extends AppCompatActivity {
         nextButton = findViewById(R.id.nextButton);
         editAnswer = findViewById(R.id.Edit_Answer);
 
-        previousTime = getIntent().getExtras().getLong("prevTime2");
+        previousTime = getIntent().getExtras().getLong("prevTime");
 
         chronometer = findViewById(R.id.chronometer);
 
@@ -52,6 +57,33 @@ public class Questionnaire3 extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(Questionnaire3.this);
+
+        builder.setTitle("Do you want to return to Home Screen?");
+        builder.setMessage("Your Progress Will Be Lost!");
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent intent = new Intent(Questionnaire3.this, StartGame.class);
+                startActivity(intent);
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                score = getIntent().getIntExtra("runningScore",0);
+                Toast.makeText(Questionnaire3.this,Integer.toString(score),Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        builder.show();
+
     }
 
     protected void onStart() {
@@ -84,18 +116,80 @@ public class Questionnaire3 extends AppCompatActivity {
 
     public void nextButton1(View view) {
 
-        String answer;
+        score = getIntent().getIntExtra("runningScore", 0);
+        ArrayList<Integer> seed = getIntent().getIntegerArrayListExtra("seed");
+        seedOrder = getIntent().getIntExtra("seedOrder", 0);
 
-        answer = editAnswer.getText().toString().trim();
 
-        Toast.makeText(Questionnaire3.this,answer,Toast.LENGTH_SHORT).show();
+        if(seedOrder+1 >= 5){
+            Intent intent = new Intent(Questionnaire3.this, Score.class);
+            txtAnswer = editAnswer.getText().toString().trim();
+            if (txtAnswer.equalsIgnoreCase("Courage")) {
+                intent.putExtra("runningScore", score);
+            } else if (notAnswered == 1) {
+                intent.putExtra("runningScore", score-2500);
+            } else {
+                intent.putExtra("runningScore", score-2500);
+            }
+            long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
+            intent.putExtra("prevTime", elapsedMillis);
+            intent.putExtra("seedOrder", seedOrder + 1);
+            intent.putIntegerArrayListExtra("seed", seed);
+            startActivity(intent);
+        }
 
-        long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
-        Intent intent = new Intent(Questionnaire3.this,Score.class);
-        intent.putExtra("prevTime3",elapsedMillis);
-        startActivity(intent);
+            else if (seed.get(seedOrder) == 1) {
+                Intent intent = new Intent(Questionnaire3.this, Questionnaire.class);
+                txtAnswer = editAnswer.getText().toString().trim();
+                if (txtAnswer.equalsIgnoreCase("Courage")) {
+                    intent.putExtra("runningScore", score);
+                } else if (notAnswered == 1) {
+                    intent.putExtra("runningScore", score-2500);
+                } else {
+                    intent.putExtra("runningScore", score-2500);
+                }
+                long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
+                intent.putExtra("prevTime", elapsedMillis);
+                intent.putExtra("seedOrder", seedOrder + 1);
+                intent.putIntegerArrayListExtra("seed", seed);
+                startActivity(intent);
 
-    }
+            } else if (seed.get(seedOrder) == 2) {
+                Intent intent = new Intent(Questionnaire3.this, Questionnaire1.class);
+                txtAnswer = editAnswer.getText().toString().trim();
+                if (txtAnswer.equalsIgnoreCase("Courage")) {
+                    intent.putExtra("runningScore", score);
+                } else if (notAnswered == 1) {
+                    intent.putExtra("runningScore", score-2500);
+                } else {
+                    intent.putExtra("runningScore", score-2500);
+                }
+
+                long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
+                intent.putExtra("prevTime", elapsedMillis);
+                intent.putExtra("seedOrder", seedOrder + 1);
+                intent.putIntegerArrayListExtra("seed", seed);
+                startActivity(intent);
+
+            } else if (seed.get(seedOrder) == 3) {
+                Intent intent = new Intent(Questionnaire3.this, Questionnaire2.class);
+                txtAnswer = editAnswer.getText().toString().trim();
+                if (txtAnswer.equalsIgnoreCase("Courage")) {
+                    intent.putExtra("runningScore", score);
+                } else if (notAnswered == 1) {
+                    intent.putExtra("runningScore", score-2500);
+                } else {
+                    intent.putExtra("runningScore", score-2500);
+                }
+                long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
+                intent.putExtra("prevTime", elapsedMillis);
+                intent.putExtra("seedOrder", seedOrder + 1);
+                intent.putIntegerArrayListExtra("seed", seed);
+                startActivity(intent);
+
+            }
+        }
+
 
 
 }
