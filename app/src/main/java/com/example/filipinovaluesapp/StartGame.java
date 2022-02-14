@@ -1,5 +1,6 @@
 package com.example.filipinovaluesapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,10 +10,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 
 public class StartGame extends AppCompatActivity {
 
+
+    FirebaseAuth mAuth;
+    FirebaseUser user;
+    DatabaseReference dbReference;
+    String userID, userName, emailText, highScore;
 
     Button startGame, howToPlay, leaderBoards;
     int baseScore = 100000, seedOrder = 0;
@@ -22,9 +36,44 @@ public class StartGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_game);
 
+        mAuth=FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
+        dbReference = FirebaseDatabase.getInstance().getReference("Users");
+        userID = user.getUid();
+
+
         startGame = findViewById(R.id.startGame);
         howToPlay = findViewById(R.id.howToPlay);
         leaderBoards = findViewById(R.id.Leaderboards);
+
+
+        dbReference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User user = snapshot.getValue(User.class);
+
+                if(user!=null){
+                    String name, email;
+                    int score;
+
+                    name = user.username;
+                    email = user.email;
+                    score = user.score;
+
+                    userName = name;
+                    emailText = email;
+                    highScore = Integer.toString(score);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
 
         startGame.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -81,6 +130,20 @@ public class StartGame extends AppCompatActivity {
                 return false;
             }
         });
+
+
+    }
+
+    public void settingsButton(View view) {
+        Intent intent = new Intent(this, Settings.class);
+        intent.putExtra("username",userName);
+        intent.putExtra("email",emailText);
+        intent.putExtra("highScore", highScore);
+
+        startActivity(intent);
+
+
+
 
 
     }

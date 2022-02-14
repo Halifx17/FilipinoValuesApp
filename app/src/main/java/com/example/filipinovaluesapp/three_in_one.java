@@ -3,6 +3,7 @@ package com.example.filipinovaluesapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -111,10 +113,29 @@ public class three_in_one extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
 
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(three_in_one.this);
 
+        builder.setMessage("Quit Game?");
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
 
+                System.exit(0);
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
 
+            }
+        });
+
+        builder.show();
+
+    }
 
     public void tioLogIn(View view) {
 

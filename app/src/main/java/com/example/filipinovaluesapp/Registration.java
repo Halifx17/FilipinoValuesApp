@@ -77,6 +77,7 @@ public class Registration extends AppCompatActivity {
     public void registerFirebase(View view) {
 
         String username, email, password, retypePassword;
+        int score = 0;
 
         username = editUserName.getText().toString().trim();
         email = editEmail.getText().toString().trim();
@@ -124,7 +125,7 @@ public class Registration extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if (task.isSuccessful()) {
-                                User user = new User(username, email, password);
+                                User user = new User(username, email, password, score);
 
                                 FirebaseDatabase.getInstance().getReference("Users")
                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

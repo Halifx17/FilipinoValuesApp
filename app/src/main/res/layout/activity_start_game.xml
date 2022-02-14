@@ -10,11 +10,26 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/Background"
         android:scaleType="fitXY"
         android:src="@drawable/bg_img"
-        android:contentDescription="@string/Background">
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="0dp">
 
     </ImageView>
+
+    <ImageButton
+        android:id="@+id/image_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/tio_login"
+        android:onClick="settingsButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_settings_24"
+        app:tint="@color/white" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/startGame"

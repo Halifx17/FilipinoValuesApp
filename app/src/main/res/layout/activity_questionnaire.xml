@@ -16,16 +16,6 @@
 
     </ImageView>
 
-    <ImageButton
-        android:id="@+id/image_menu"
-        android:layout_width="55dp"
-        android:layout_height="43dp"
-        android:onClick="settingsButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_menu"
-        android:contentDescription="@string/Hamburger"/>
-
     <TextView
         android:id="@+id/intro_title"
         android:layout_width="324dp"
@@ -34,8 +24,7 @@
         android:text="@string/ValuesQuiz"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/image_menu"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
