@@ -234,44 +234,7 @@ public class StartGame extends AppCompatActivity {
     }
 
     public void leaderBoards(View view) {
-
-        ArrayList<Integer> seed = new ArrayList<Integer>();
-
-        for (int count = 0; count <= 3; count++) {
-            seed.add(count, (int) Math.floor((Math.random() * 4) + 1));
-            int i = 0;
-            while (i != 1 && seed.size() >= 2 && seed.size() <= 4) {
-                if (seed.size() == 2) {
-                    if (seed.get(count) == seed.get(count - 1)) {
-                        seed.set(count, (int) Math.floor((Math.random() * 4) + 1));
-                        i = 0;
-                    } else {
-                        i = 1;
-                    }
-
-                } else if (seed.size() == 3) {
-                    if (seed.get(count) == seed.get(count - 2)
-                            ||seed.get(count) == seed.get(count - 1)) {
-                        seed.set(count, (int) Math.floor((Math.random() * 4) + 1));
-                        i = 0;
-                    } else
-                        i = 1;
-                } else if (seed.size() == 4) {
-                    if (seed.get(count) == seed.get(count - 3)
-                            ||seed.get(count) == seed.get(count - 2)
-                            ||seed.get(count) == seed.get(count - 1)) {
-                        seed.set(count, (int) Math.floor((Math.random() * 4) + 1));
-                        i = 0;
-                    } else
-                        i = 1;
-                }
-            }
-
-
-        }
-        for (int index = 0; index <= 3; index++) {
-            int a = (int) seed.get(index);
-            Toast.makeText(this, Integer.toString(seed.get(index)), Toast.LENGTH_SHORT).show();
-        }
+        Intent intent = new Intent(StartGame.this,Leaderboards.class);
+        startActivity(intent);
     }
 }
