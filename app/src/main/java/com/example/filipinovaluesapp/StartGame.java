@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -27,6 +29,12 @@ public class StartGame extends AppCompatActivity {
     FirebaseUser user;
     DatabaseReference dbReference;
     String userID, userName, emailText, highScore;
+
+    ArrayList<String> usernames = new ArrayList<>();
+    ArrayList <Integer>scores = new ArrayList<>();
+
+    String firstPlace, secondPlace, thirdPlace, fourthPlace, fifthPlace;
+    String firstPlaceName, secondPlaceName, thirdPlaceName, fourthPlaceName, fifthPlaceName;
 
     Button startGame, howToPlay, leaderBoards;
     int baseScore = 100000, seedOrder = 0;
@@ -72,6 +80,33 @@ public class StartGame extends AppCompatActivity {
 
             }
         });
+
+        Query query = dbReference.orderByChild("score").limitToLast(5);
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for (DataSnapshot postSnapshot: snapshot.getChildren()) {
+                    Highscore score=postSnapshot.getValue(Highscore.class);
+
+                    if(score!=null){
+                        scores.add(score.score);
+                        usernames.add(score.username);
+                    }
+
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
 
 
 
@@ -234,7 +269,49 @@ public class StartGame extends AppCompatActivity {
     }
 
     public void leaderBoards(View view) {
+
         Intent intent = new Intent(StartGame.this,Leaderboards.class);
+
+        for(int i = scores.size()-1; i>=0; i--){
+            if(i == scores.size()-1){
+                firstPlace = Integer.toString(scores.get(i));
+            }else if(i == scores.size()-2){
+                secondPlace = Integer.toString(scores.get(i));
+            }else if(i == scores.size()-3){
+                thirdPlace = Integer.toString(scores.get(i));
+            }else if(i == scores.size()-4){
+                fourthPlace = Integer.toString(scores.get(i));
+            }else if(i == scores.size()-5){
+                fifthPlace = Integer.toString(scores.get(i));
+            }
+            System.out.println(scores.get(i));
+        }
+        for(int i = 0; i<=usernames.size()-1; i++){
+            if(i == usernames.size()-1){
+                firstPlaceName = usernames.get(i);
+            }else if(i == usernames.size()-2){
+                secondPlaceName = usernames.get(i);
+            }else if(i == usernames.size()-3){
+                thirdPlaceName = usernames.get(i);
+            }else if(i == usernames.size()-4){
+                fourthPlaceName = usernames.get(i);
+            }else if(i == usernames.size()-5){
+                fifthPlaceName = usernames.get(i);
+            }
+            System.out.println(usernames.get(i));
+        }
+
+        intent.putExtra("firstScore", firstPlace);
+        intent.putExtra("secondScore", secondPlace);
+        intent.putExtra("thirdScore", thirdPlace);
+        intent.putExtra("fourthScore", fourthPlace);
+        intent.putExtra("fifthScore", fifthPlace);
+
+        intent.putExtra("firstName", firstPlaceName);
+        intent.putExtra("secondName", secondPlaceName);
+        intent.putExtra("thirdName", thirdPlaceName);
+        intent.putExtra("fourthName", fourthPlaceName);
+        intent.putExtra("fifthName", fifthPlaceName);
         startActivity(intent);
     }
 }

@@ -14,8 +14,8 @@
       android:contentDescription="@string/Background"
       android:scaleType="fitXY"
       android:src="@drawable/bg_img"
-      tools:layout_editor_absoluteX="16dp"
-      tools:layout_editor_absoluteY="-32dp">
+      tools:layout_editor_absoluteX="0dp"
+      tools:layout_editor_absoluteY="0dp">
 
   </ImageView>
 
@@ -34,42 +34,124 @@
 
 
   <TextView
-      android:id="@+id/username"
+      android:id="@+id/firstPlace"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="48dp"
-      android:text=""
+      android:layout_marginTop="92dp"
+      android:text="One"
       android:textColor="@color/white"
       android:textSize="25sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.498"
-      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="@+id/titleScore"
+      app:layout_constraintStart_toStartOf="@+id/titleScore"
       app:layout_constraintTop_toBottomOf="@+id/title" />
 
   <TextView
-      android:id="@+id/email"
+      android:id="@+id/secondPlaceName"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="40dp"
-      android:text="@string/Whoops"
+      android:layout_marginTop="168dp"
+      android:text="user2"
       android:textColor="@color/white"
       android:textSize="25sp"
-      app:layout_constraintEnd_toEndOf="@+id/username"
-      app:layout_constraintStart_toStartOf="@+id/username"
-      app:layout_constraintTop_toBottomOf="@+id/username" />
+      app:layout_constraintEnd_toEndOf="@+id/titleUser"
+      app:layout_constraintStart_toStartOf="@+id/titleUser"
+      app:layout_constraintTop_toBottomOf="@+id/title" />
 
   <TextView
-      android:id="@+id/highScore"
+      android:id="@+id/secondPlace"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="40dp"
-      android:text=""
+      android:text="Two"
       android:textColor="@color/white"
       android:textSize="25sp"
-      app:layout_constraintEnd_toEndOf="@+id/email"
-      app:layout_constraintHorizontal_bias="0.506"
-      app:layout_constraintStart_toStartOf="@+id/email"
-      app:layout_constraintTop_toBottomOf="@+id/email" />
+      app:layout_constraintEnd_toEndOf="@+id/titleScore"
+      app:layout_constraintStart_toStartOf="@+id/titleScore"
+      app:layout_constraintTop_toBottomOf="@+id/firstPlace" />
+
+  <TextView
+      android:id="@+id/thirdPlace"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:text="Three"
+      android:textColor="@color/white"
+      android:textSize="25sp"
+      app:layout_constraintEnd_toEndOf="@+id/titleScore"
+      app:layout_constraintStart_toStartOf="@+id/titleScore"
+      app:layout_constraintTop_toBottomOf="@+id/secondPlace" />
+
+  <TextView
+      android:id="@+id/thirdPlaceName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="232dp"
+      android:text="user3"
+      android:textColor="@color/white"
+      android:textSize="25sp"
+      app:layout_constraintEnd_toEndOf="@+id/titleUser"
+      app:layout_constraintStart_toStartOf="@+id/titleUser"
+      app:layout_constraintTop_toBottomOf="@+id/title" />
+
+  <TextView
+      android:id="@+id/fourthPlaceName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="288dp"
+      android:text="user4"
+      android:textColor="@color/white"
+      android:textSize="25sp"
+      app:layout_constraintEnd_toEndOf="@+id/titleUser"
+      app:layout_constraintStart_toStartOf="@+id/titleUser"
+      app:layout_constraintTop_toBottomOf="@+id/title" />
+
+  <TextView
+      android:id="@+id/fourthPlace"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:text="Four"
+      android:textColor="@color/white"
+      android:textSize="25sp"
+      app:layout_constraintEnd_toEndOf="@+id/titleScore"
+      app:layout_constraintStart_toStartOf="@+id/titleScore"
+      app:layout_constraintTop_toBottomOf="@+id/thirdPlace" />
+
+  <TextView
+      android:id="@+id/fifthPlaceName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="340dp"
+      android:text="user5"
+      android:textColor="@color/white"
+      android:textSize="25sp"
+      app:layout_constraintEnd_toEndOf="@+id/titleUser"
+      app:layout_constraintStart_toStartOf="@+id/titleUser"
+      app:layout_constraintTop_toBottomOf="@+id/title" />
+
+  <TextView
+      android:id="@+id/fifthPlace"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:text="Five"
+      android:textColor="@color/white"
+      android:textSize="25sp"
+      app:layout_constraintEnd_toEndOf="@+id/titleScore"
+      app:layout_constraintStart_toStartOf="@+id/titleScore"
+      app:layout_constraintTop_toBottomOf="@+id/fourthPlace" />
+
+  <TextView
+      android:id="@+id/firstPlaceName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="92dp"
+      android:text="user1"
+      android:textColor="@color/white"
+      android:textSize="25sp"
+      app:layout_constraintEnd_toEndOf="@+id/titleUser"
+      app:layout_constraintStart_toStartOf="@+id/titleUser"
+      app:layout_constraintTop_toBottomOf="@+id/title" />
 
   <TextView
       android:id="@+id/title"
@@ -87,4 +169,46 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <TextView
+      android:id="@+id/titleUser"
+      android:layout_width="100dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="36dp"
+      android:background="@drawable/textview_round_green"
+      android:padding="10dp"
+      android:text="@string/Username"
+      android:textAlignment="center"
+      android:textColor="@color/white"
+      android:textSize="15sp"
+      app:layout_constraintStart_toStartOf="@+id/title"
+      app:layout_constraintTop_toBottomOf="@+id/title" />
+
+  <TextView
+      android:id="@+id/titleScore"
+      android:layout_width="100dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="36dp"
+      android:layout_marginEnd="20dp"
+      android:background="@drawable/textview_round_green"
+      android:padding="10dp"
+      android:text="@string/Score"
+      android:textAlignment="center"
+      android:textColor="@color/white"
+      android:textSize="15sp"
+      app:layout_constraintEnd_toEndOf="@+id/title"
+      app:layout_constraintTop_toBottomOf="@+id/title" />
+
+  <Button
+      android:id="@+id/button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:onClick="show"
+      android:text="Show"
+      app:layout_constraintEnd_toEndOf="@+id/title"
+      app:layout_constraintStart_toStartOf="@+id/title"
+      app:layout_constraintTop_toBottomOf="@+id/fifthPlace" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
