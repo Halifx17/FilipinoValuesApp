@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Questionnaire">
+    tools:context=".Questionnaire4">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="@string/Background"
         android:scaleType="fitXY"
-        android:src="@drawable/bg_img">
+        android:src="@drawable/bg_img"
+        android:contentDescription="@string/Background">
 
     </ImageView>
 
@@ -46,7 +46,7 @@
         android:layout_width="350dp"
         android:layout_height="120dp"
         android:layout_marginTop="32dp"
-        android:text="@string/Question"
+        android:text="Question4"
         android:background="@drawable/textview_round"
         android:padding="20dp"
         android:textColor="@color/black"
@@ -234,6 +234,5 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/intro_title"
         app:layout_constraintTop_toTopOf="@+id/Question" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

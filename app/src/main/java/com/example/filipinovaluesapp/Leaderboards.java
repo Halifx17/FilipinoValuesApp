@@ -120,72 +120,6 @@ public class Leaderboards extends AppCompatActivity {
 
 
 
-/*
-        dbReference.orderByChild("score").limitToLast(10).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Highscore user_score = snapshot.getValue(Highscore.class);
-
-
-
-                System.out.println(snapshot.getKey() + " " + user_score.username + " Score is " + user_score.score);
-
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-
-
-*/
-
-
-/*
-
-            dbReference.orderByChild("score").limitToLast(2).addChildEventListener(new ChildEventListener() {
-
-
-                @Override
-                public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                    Highscore user_score = snapshot.getValue(Highscore.class);
-                    firstPlace.setText(user_score.username);
-                    System.out.println(snapshot.getKey() + " " + user_score.username + " Score is " + user_score.score);
-
-                }
-
-
-                @Override
-                public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                }
-
-                @Override
-                public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-
-                }
-
-                @Override
-                public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-
-            });
-
-
-
-*/
-
-
 
     }
 
@@ -198,36 +132,4 @@ public class Leaderboards extends AppCompatActivity {
     }
 
 
-
-    public void show(View view) {
-
-        for(int i = scores.size()-1; i>=0; i--){
-            if(i == scores.size()-1){
-                firstPlace.setText(Integer.toString(scores.get(i)));
-            }else if(i == scores.size()-2){
-                secondPlace.setText(Integer.toString(scores.get(i)));
-            }else if(i == scores.size()-3){
-                thirdPlace.setText(Integer.toString(scores.get(i)));
-            }else if(i == scores.size()-4){
-                fourthPlace.setText(Integer.toString(scores.get(i)));
-            }else if(i == scores.size()-5){
-                fifthPlace.setText(Integer.toString(scores.get(i)));
-            }
-        System.out.println(scores.get(i));
-        }
-        for(int i = 0; i<=usernames.size()-1; i++){
-            if(i == usernames.size()-1){
-                firstPlaceName.setText(usernames.get(i));
-            }else if(i == usernames.size()-2){
-                secondPlaceName.setText(usernames.get(i));
-            }else if(i == usernames.size()-3){
-                thirdPlaceName.setText(usernames.get(i));
-            }else if(i == usernames.size()-4){
-                fourthPlaceName.setText(usernames.get(i));
-            }else if(i == usernames.size()-5){
-                fifthPlaceName.setText(usernames.get(i));
-            }
-            System.out.println(usernames.get(i));
-        }
-    }
 }

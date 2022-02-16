@@ -123,7 +123,9 @@ public class three_in_one extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
-                System.exit(0);
+                finish();
+                moveTaskToBack(true);
+
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

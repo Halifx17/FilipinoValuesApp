@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Questionnaire2">
+    tools:context=".Questionnaire5">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_img"
+        android:contentDescription="@string/Background">
+
+    </ImageView>
 
     <ImageView
         android:id="@+id/imageView3"
@@ -30,82 +40,78 @@
         android:layout_width="350dp"
         android:layout_height="120dp"
         android:layout_marginTop="32dp"
-        android:text="@string/Question2"
-        android:textAlignment="center"
+        android:text="Q5"
         android:background="@drawable/textview_round"
         android:padding="20dp"
         android:textColor="@color/black"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/intro_title" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/q2Choice1"
-        android:layout_width="220dp"
+        android:id="@+id/Choice1"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:background="@drawable/tio_login"
         android:onClick="MCQ1"
-        android:text="@string/Faith"
+        android:text="@string/JoyAndHumor"
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Choice2"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/tio_login"
+        android:onClick="MCQ2"
+        android:text="@string/SelfDiscipline"
+        android:textColor="@color/white"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/q2Choice2"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/tio_login"
-        android:onClick="MCQ2"
-        android:text="@string/Flex_Adapt_Create"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/q2Choice1" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/q2Choice3"
-        android:layout_width="220dp"
+        android:id="@+id/Choice3"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
         android:onClick="MCQ3"
-        android:text="@string/Friend"
+        android:text="@string/Unselfishness"
         android:textColor="@color/white"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/q2Choice2" />
+        app:layout_constraintEnd_toEndOf="@+id/Choice1"
+        app:layout_constraintTop_toBottomOf="@+id/Choice1" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/q2Choice4"
-        android:layout_width="220dp"
+        android:id="@+id/Choice4"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
         android:onClick="MCQ4"
-        android:text="@string/Hard_work"
+        android:text="@string/Love"
         android:textColor="@color/white"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/q2Choice3" />
+        app:layout_constraintStart_toStartOf="@+id/Choice2"
+        app:layout_constraintTop_toBottomOf="@+id/Choice2" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/questionnaire_buttons"
         android:onClick="nextButton1"
         android:text="@string/Next"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/q2Choice4" />
+        app:layout_constraintEnd_toEndOf="@+id/Choice3"
+        app:layout_constraintTop_toBottomOf="@+id/Choice3" />
 
     <Chronometer
         android:id="@+id/chronometer"
@@ -145,6 +151,5 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/intro_title"
         app:layout_constraintTop_toTopOf="@+id/Question" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

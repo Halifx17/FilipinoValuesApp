@@ -3,6 +3,7 @@ package com.example.filipinovaluesapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -169,6 +171,31 @@ public class StartGame extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(StartGame.this);
+
+
+        builder.setMessage("Return to LOG IN Screen?");
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent intent = new Intent(StartGame.this, three_in_one.class);
+                startActivity(intent);
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+
+        builder.show();
+
+    }
+
     public void settingsButton(View view) {
         Intent intent = new Intent(this, Settings.class);
         intent.putExtra("username",userName);
@@ -186,13 +213,13 @@ public class StartGame extends AppCompatActivity {
     public void gameStart(View view) {
         ArrayList<Integer> seed = new ArrayList<Integer>();
 
-        for (int count = 0; count <= 3; count++) {
-            seed.add(count, (int) Math.floor((Math.random() * 4) + 1));
+        for (int count = 0; count <= 9; count++) {
+            seed.add(count, (int) Math.floor((Math.random() * 10) + 1));
             int i = 0;
-            while (i != 1 && seed.size() >= 2 && seed.size() <= 4) {
+            while (i != 1 && seed.size() >= 2 && seed.size() <= 10) {
                 if (seed.size() == 2) {
                     if (seed.get(count) == seed.get(count - 1)) {
-                        seed.set(count, (int) Math.floor((Math.random() * 4) + 1));
+                        seed.set(count, (int) Math.floor((Math.random() * 10) + 1));
                         i = 0;
                     } else {
                         i = 1;
@@ -201,7 +228,7 @@ public class StartGame extends AppCompatActivity {
                 } else if (seed.size() == 3) {
                     if (seed.get(count) == seed.get(count - 2)
                             ||seed.get(count) == seed.get(count - 1)) {
-                        seed.set(count, (int) Math.floor((Math.random() * 4) + 1));
+                        seed.set(count, (int) Math.floor((Math.random() * 10) + 1));
                         i = 0;
                     } else
                         i = 1;
@@ -209,12 +236,84 @@ public class StartGame extends AppCompatActivity {
                     if (seed.get(count) == seed.get(count - 3)
                             ||seed.get(count) == seed.get(count - 2)
                             ||seed.get(count) == seed.get(count - 1)) {
-                        seed.set(count, (int) Math.floor((Math.random() * 4) + 1));
+                        seed.set(count, (int) Math.floor((Math.random() * 10) + 1));
+                        i = 0;
+                    } else
+                        i = 1;
+                }else if (seed.size() == 5) {
+                    if (seed.get(count) == seed.get(count - 4)
+                            ||seed.get(count) == seed.get(count - 3)
+                            ||seed.get(count) == seed.get(count - 2)
+                            ||seed.get(count) == seed.get(count - 1)) {
+                        seed.set(count, (int) Math.floor((Math.random() * 10) + 1));
+                        i = 0;
+                    } else
+                        i = 1;
+                }else if (seed.size() == 6) {
+                    if (seed.get(count) == seed.get(count - 5)
+                            ||seed.get(count) == seed.get(count - 4)
+                            ||seed.get(count) == seed.get(count - 3)
+                            ||seed.get(count) == seed.get(count - 2)
+                            ||seed.get(count) == seed.get(count - 1)) {
+                        seed.set(count, (int) Math.floor((Math.random() * 10) + 1));
+                        i = 0;
+                    } else
+                        i = 1;
+                }else if (seed.size() == 7) {
+                    if (seed.get(count) == seed.get(count - 6)
+                            ||seed.get(count) == seed.get(count - 5)
+                            ||seed.get(count) == seed.get(count - 4)
+                            ||seed.get(count) == seed.get(count - 3)
+                            ||seed.get(count) == seed.get(count - 2)
+                            ||seed.get(count) == seed.get(count - 1)) {
+                        seed.set(count, (int) Math.floor((Math.random() * 10) + 1));
+                        i = 0;
+                    } else
+                        i = 1;
+                }else if (seed.size() == 8) {
+                    if (seed.get(count) == seed.get(count - 7)
+                            ||seed.get(count) == seed.get(count - 6)
+                            ||seed.get(count) == seed.get(count - 5)
+                            ||seed.get(count) == seed.get(count - 4)
+                            ||seed.get(count) == seed.get(count - 3)
+                            ||seed.get(count) == seed.get(count - 2)
+                            ||seed.get(count) == seed.get(count - 1)) {
+                        seed.set(count, (int) Math.floor((Math.random() * 10) + 1));
+                        i = 0;
+                    } else
+                        i = 1;
+                }else if (seed.size() == 9) {
+                    if (seed.get(count) == seed.get(count - 8)
+                            ||seed.get(count) == seed.get(count - 7)
+                            ||seed.get(count) == seed.get(count - 6)
+                            ||seed.get(count) == seed.get(count - 5)
+                            ||seed.get(count) == seed.get(count - 4)
+                            ||seed.get(count) == seed.get(count - 3)
+                            ||seed.get(count) == seed.get(count - 2)
+                            ||seed.get(count) == seed.get(count - 1)) {
+                        seed.set(count, (int) Math.floor((Math.random() * 10) + 1));
+                        i = 0;
+                    } else
+                        i = 1;
+                }else if (seed.size() == 10) {
+                    if (seed.get(count) == seed.get(count - 9)
+                            ||seed.get(count) == seed.get(count - 8)
+                            ||seed.get(count) == seed.get(count - 7)
+                            ||seed.get(count) == seed.get(count - 6)
+                            ||seed.get(count) == seed.get(count - 5)
+                            ||seed.get(count) == seed.get(count - 4)
+                            ||seed.get(count) == seed.get(count - 3)
+                            ||seed.get(count) == seed.get(count - 2)
+                            ||seed.get(count) == seed.get(count - 1)) {
+                        seed.set(count, (int) Math.floor((Math.random() * 10) + 1));
                         i = 0;
                     } else
                         i = 1;
                 }
+
+
             }
+
 
 
         }
@@ -246,6 +345,42 @@ public class StartGame extends AppCompatActivity {
             intent.putExtra("seedOrder",seedOrder + 1);
             intent.putIntegerArrayListExtra("seed",seed);
             startActivity(intent);
+        }else if(seed.get(seedOrder) == 5){
+            Intent intent = new Intent(StartGame.this, Questionnaire4.class);
+            intent.putExtra("runningScore", baseScore);
+            intent.putExtra("seedOrder",seedOrder + 1);
+            intent.putIntegerArrayListExtra("seed",seed);
+            startActivity(intent);
+        }else if(seed.get(seedOrder) == 6){
+            Intent intent = new Intent(StartGame.this, Questionnaire5.class);
+            intent.putExtra("runningScore", baseScore);
+            intent.putExtra("seedOrder",seedOrder + 1);
+            intent.putIntegerArrayListExtra("seed",seed);
+            startActivity(intent);
+        }else if(seed.get(seedOrder) == 7){
+            Intent intent = new Intent(StartGame.this, Questionnaire6.class);
+            intent.putExtra("runningScore", baseScore);
+            intent.putExtra("seedOrder",seedOrder + 1);
+            intent.putIntegerArrayListExtra("seed",seed);
+            startActivity(intent);
+        }else if(seed.get(seedOrder) == 8){
+            Intent intent = new Intent(StartGame.this, Questionnaire7.class);
+            intent.putExtra("runningScore", baseScore);
+            intent.putExtra("seedOrder",seedOrder + 1);
+            intent.putIntegerArrayListExtra("seed",seed);
+            startActivity(intent);
+        }else if(seed.get(seedOrder) == 9){
+            Intent intent = new Intent(StartGame.this, Questionnaire8.class);
+            intent.putExtra("runningScore", baseScore);
+            intent.putExtra("seedOrder",seedOrder + 1);
+            intent.putIntegerArrayListExtra("seed",seed);
+            startActivity(intent);
+        }else if(seed.get(seedOrder) == 10){
+            Intent intent = new Intent(StartGame.this, Questionnaire9.class);
+            intent.putExtra("runningScore", baseScore);
+            intent.putExtra("seedOrder",seedOrder + 1);
+            intent.putIntegerArrayListExtra("seed",seed);
+            startActivity(intent);
         }
 /*
 
@@ -255,7 +390,12 @@ public class StartGame extends AppCompatActivity {
         intent.putExtra("seedOrder",seedOrder + 1);
         intent.putIntegerArrayListExtra("seed",seed);
         startActivity(intent);
+
+
 */
+        for(int x = 0; x<=9; x++){
+            System.out.println(seed.get(x));
+        }
 
     }
 
