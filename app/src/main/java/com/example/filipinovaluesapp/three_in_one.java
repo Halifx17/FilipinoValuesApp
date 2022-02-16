@@ -24,6 +24,7 @@ public class three_in_one extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     Button LogIn, guestButton, registerButton;
+    boolean isAnonymous;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -36,47 +36,51 @@
 
     <TextView
         android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/textview_round"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/Username"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/usernameTitle"
+        app:layout_constraintStart_toStartOf="@+id/usernameTitle"
+        app:layout_constraintTop_toBottomOf="@+id/usernameTitle" />
 
     <TextView
         android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/Whoops"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="@+id/username"
-        app:layout_constraintStart_toStartOf="@+id/username"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/textview_round"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Email"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/emailTitle"
+        app:layout_constraintStart_toStartOf="@+id/emailTitle"
+        app:layout_constraintTop_toBottomOf="@+id/emailTitle" />
 
     <TextView
         android:id="@+id/highScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="@+id/email"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="@+id/email"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/textview_round"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="High Score"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/scoreTitleSettings"
+        app:layout_constraintStart_toStartOf="@+id/scoreTitleSettings"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTitleSettings" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Quit"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="292dp"
+        android:layout_marginTop="432dp"
         android:background="@drawable/tio_login"
         android:onClick="logout"
         android:text="Quit Game"
@@ -91,15 +95,16 @@
         android:id="@+id/settingReg"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
         android:onClick="settingsReg"
         android:text="Register/Login"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/email"
-        app:layout_constraintStart_toStartOf="@+id/email"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/highScore" />
 
     <TextView
         android:id="@+id/title"
@@ -116,5 +121,64 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/usernameTitle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/textview_round_green"
+        android:gravity="center"
+        android:text="Username:"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/emailTitle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:background="@drawable/textview_round_green"
+        android:gravity="center"
+        android:text="Email:"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/scoreTitleSettings"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="248dp"
+        android:background="@drawable/textview_round_green"
+        android:gravity="center"
+        android:text="High Score:"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/whoops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="@string/Whoops"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

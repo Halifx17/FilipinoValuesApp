@@ -21,7 +21,7 @@ public class Questionnaire8 extends AppCompatActivity {
 
     Button LetK, LetA, LetR, LetM, LetÀ, nextButton, resetButton;
     TextView L1, L2, L3, L4, L5;
-    int Time = 0, score = 0, answer = 0, notAnswered = 1, seedOrder = 0;
+    int Time = 0, score = 0, answer = 0, notAnswered = 1, seedOrder = 0, points;
     long previousTime;
     TextView questionNumber;
     String strTime, txtAnswer;
@@ -53,6 +53,7 @@ public class Questionnaire8 extends AppCompatActivity {
         seedOrder = getIntent().getIntExtra("seedOrder",0);
         questionNumber = findViewById(R.id.questionNumber);
         questionNumber.setText(Integer.toString(seedOrder));
+        points = getIntent().getIntExtra("points",0);
 
         previousTime = getIntent().getExtras().getLong("prevTime");
 
@@ -311,10 +312,12 @@ public class Questionnaire8 extends AppCompatActivity {
 
         if(seedOrder+1 >= 11){
             Intent intent = new Intent(Questionnaire8.this, Score.class);
-            if (answer == 1) {
+            if (txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")) {
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             } else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime", elapsedMillis);
@@ -327,8 +330,10 @@ public class Questionnaire8 extends AppCompatActivity {
             if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime",elapsedMillis);
@@ -343,8 +348,10 @@ public class Questionnaire8 extends AppCompatActivity {
             if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime",elapsedMillis);
@@ -357,8 +364,10 @@ public class Questionnaire8 extends AppCompatActivity {
             if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime",elapsedMillis);
@@ -371,8 +380,10 @@ public class Questionnaire8 extends AppCompatActivity {
             if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime",elapsedMillis);
@@ -385,8 +396,10 @@ public class Questionnaire8 extends AppCompatActivity {
             if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime",elapsedMillis);
@@ -399,8 +412,10 @@ public class Questionnaire8 extends AppCompatActivity {
             if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime",elapsedMillis);
@@ -412,8 +427,10 @@ public class Questionnaire8 extends AppCompatActivity {
             if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime",elapsedMillis);
@@ -425,8 +442,10 @@ public class Questionnaire8 extends AppCompatActivity {
             if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime",elapsedMillis);
@@ -438,8 +457,10 @@ public class Questionnaire8 extends AppCompatActivity {
             if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime",elapsedMillis);

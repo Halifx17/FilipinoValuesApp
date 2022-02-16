@@ -135,7 +135,6 @@ public class Registration extends AppCompatActivity {
 
                                         if (task.isSuccessful()) {
                                             openDialog();
-                                            finish();
                                         } else {
                                             Toast.makeText(Registration.this, "Failed Registration", Toast.LENGTH_LONG).show();
                                         }
@@ -163,6 +162,7 @@ public class Registration extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
 
                 Intent intent = new Intent(getApplicationContext(),LogIn.class);
+                finish();
                 startActivity(intent);
 
             }

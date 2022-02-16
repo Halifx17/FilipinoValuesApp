@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class Questionnaire6 extends AppCompatActivity {
 
     Button q2Choice1, q2Choice2, q2Choice3, q2Choice4, nextButton;
-    int Time = 0, score = 0, answer = 0, notAnswered = 1, seedOrder = 0;
+    int Time = 0, score = 0, answer = 0, notAnswered = 1, seedOrder = 0, points;
     long previousTime;
     String strTime;
     TextView questionNumber;
@@ -43,6 +43,7 @@ public class Questionnaire6 extends AppCompatActivity {
         seedOrder = getIntent().getIntExtra("seedOrder",0);
         questionNumber = findViewById(R.id.questionNumber);
         questionNumber.setText(Integer.toString(seedOrder));
+        points = getIntent().getIntExtra("points",0);
 
         previousTime = getIntent().getExtras().getLong("prevTime");
 
@@ -197,10 +198,13 @@ public class Questionnaire6 extends AppCompatActivity {
             if (answer == 1) {
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             } else if(notAnswered == 1){
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime", elapsedMillis);
@@ -214,10 +218,13 @@ public class Questionnaire6 extends AppCompatActivity {
             if (answer == 1) {
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             } else if(notAnswered == 1){
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime", elapsedMillis);
@@ -229,10 +236,13 @@ public class Questionnaire6 extends AppCompatActivity {
             if (answer == 1) {
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             } else if(notAnswered == 1){
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime", elapsedMillis);
@@ -244,10 +254,13 @@ public class Questionnaire6 extends AppCompatActivity {
             if (answer == 1) {
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             } else if(notAnswered == 1){
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime", elapsedMillis);
@@ -260,10 +273,13 @@ public class Questionnaire6 extends AppCompatActivity {
             if (answer == 1) {
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             } else if(notAnswered == 1){
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime", elapsedMillis);
@@ -276,10 +292,13 @@ public class Questionnaire6 extends AppCompatActivity {
             if (answer == 1) {
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             } else if(notAnswered == 1){
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime", elapsedMillis);
@@ -291,10 +310,13 @@ public class Questionnaire6 extends AppCompatActivity {
             if (answer == 1) {
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             } else if(notAnswered == 1){
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime", elapsedMillis);
@@ -306,10 +328,13 @@ public class Questionnaire6 extends AppCompatActivity {
             if (answer == 1) {
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             } else if(notAnswered == 1){
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime", elapsedMillis);
@@ -321,10 +346,13 @@ public class Questionnaire6 extends AppCompatActivity {
             if (answer == 1) {
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             } else if(notAnswered == 1){
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime", elapsedMillis);
@@ -336,10 +364,13 @@ public class Questionnaire6 extends AppCompatActivity {
             if (answer == 1) {
 
                 intent.putExtra("runningScore", score);
+                intent.putExtra("points", points+1);
             } else if(notAnswered == 1){
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }else {
-                intent.putExtra("runningScore", score-2500);
+                intent.putExtra("runningScore", score-100000);
+                intent.putExtra("points", points);
             }
             long elapsedMillis = SystemClock.elapsedRealtime() - chronometer.getBase();
             intent.putExtra("prevTime", elapsedMillis);

@@ -22,41 +22,112 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="@string/Score"
+        android:text="@string/Congrats"
         android:textColor="@color/white"
+        android:background="@drawable/textview_round_brown"
         android:textSize="30sp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/score"
-        android:layout_width="wrap_content"
+        android:id="@+id/scoreTitle"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:text="Score"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/textview_round_green"
+        android:gravity="center"
+        android:text="Score:"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
-        android:id="@+id/time"
-        android:layout_width="wrap_content"
+        android:id="@+id/score"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:background="@drawable/textview_round"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="Score"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/scoreTitle"
+        app:layout_constraintStart_toStartOf="@+id/scoreTitle"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTitle" />
+
+    <TextView
+        android:id="@+id/timeTitle"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="Time"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/textview_round_green"
+        android:gravity="center"
+        android:text="Time:"
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/score"
-        app:layout_constraintStart_toStartOf="@+id/score"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/score" />
+
+    <TextView
+        android:id="@+id/pointsTitle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/textview_round_green"
+        android:gravity="center"
+        android:text="Correct Answers out of 10:"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer" />
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:background="@drawable/textview_round"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Points"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/pointsTitle"
+        app:layout_constraintStart_toStartOf="@+id/pointsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/pointsTitle" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:background="@drawable/textview_round"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/timeTitle"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/timeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/timeTitle" />
+
+    <TextView
+        android:id="@+id/bg"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:background="@drawable/textview_round"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Min(s)   -   Sec(s)"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/chronometer"
+        app:layout_constraintStart_toStartOf="@+id/chronometer"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

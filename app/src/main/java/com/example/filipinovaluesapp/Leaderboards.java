@@ -103,8 +103,8 @@ public class Leaderboards extends AppCompatActivity {
                     Highscore score=postSnapshot.getValue(Highscore.class);
 
                     if(score!=null){
-                        scores.add(score.score);
-                        usernames.add(score.username);
+                            scores.add(score.score);
+                            usernames.add(score.username);
                     }
                     Log.d("test",score.username+" Score is " + score.score);
                 }

@@ -16,8 +16,10 @@
       android:src="@drawable/bg_img"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0">
 
   </ImageView>
 
@@ -37,127 +39,141 @@
 
   <TextView
       android:id="@+id/firstPlace"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="92dp"
-      android:text="One"
-      android:textColor="@color/white"
-      android:textSize="25sp"
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:layout_marginTop="16dp"
+      android:background="@drawable/textview_round"
+      android:gravity="center"
+      android:padding="10dp"
+      android:text="score1"
+      android:textSize="20sp"
       app:layout_constraintEnd_toEndOf="@+id/titleScore"
       app:layout_constraintStart_toStartOf="@+id/titleScore"
-      app:layout_constraintTop_toBottomOf="@+id/title" />
+      app:layout_constraintTop_toBottomOf="@+id/titleScore" />
 
   <TextView
       android:id="@+id/secondPlaceName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="168dp"
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:background="@drawable/textview_round"
+      android:gravity="center"
+      android:padding="10dp"
       android:text="user2"
-      android:textColor="@color/white"
-      android:textSize="25sp"
-      app:layout_constraintEnd_toEndOf="@+id/titleUser"
-      app:layout_constraintStart_toStartOf="@+id/titleUser"
-      app:layout_constraintTop_toBottomOf="@+id/title" />
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="@+id/firstPlaceName"
+      app:layout_constraintTop_toBottomOf="@+id/firstPlaceName" />
 
   <TextView
       android:id="@+id/secondPlace"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="40dp"
-      android:text="Two"
-      android:textColor="@color/white"
-      android:textSize="25sp"
-      app:layout_constraintEnd_toEndOf="@+id/titleScore"
-      app:layout_constraintStart_toStartOf="@+id/titleScore"
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:background="@drawable/textview_round"
+      android:gravity="center"
+      android:padding="10dp"
+      android:text="score2"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="@+id/firstPlace"
       app:layout_constraintTop_toBottomOf="@+id/firstPlace" />
 
   <TextView
       android:id="@+id/thirdPlace"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="32dp"
-      android:text="Three"
-      android:textColor="@color/white"
-      android:textSize="25sp"
-      app:layout_constraintEnd_toEndOf="@+id/titleScore"
-      app:layout_constraintStart_toStartOf="@+id/titleScore"
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:background="@drawable/textview_round"
+      android:gravity="center"
+      android:padding="10dp"
+      android:text="score3"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="@+id/secondPlace"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toEndOf="@+id/secondPlaceName"
       app:layout_constraintTop_toBottomOf="@+id/secondPlace" />
 
   <TextView
       android:id="@+id/thirdPlaceName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="232dp"
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:background="@drawable/textview_round"
+      android:gravity="center"
+      android:padding="10dp"
       android:text="user3"
-      android:textColor="@color/white"
-      android:textSize="25sp"
-      app:layout_constraintEnd_toEndOf="@+id/titleUser"
-      app:layout_constraintStart_toStartOf="@+id/titleUser"
-      app:layout_constraintTop_toBottomOf="@+id/title" />
+      android:textSize="20sp"
+      app:layout_constraintEnd_toStartOf="@+id/secondPlace"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/secondPlaceName"
+      app:layout_constraintTop_toBottomOf="@+id/secondPlaceName" />
 
   <TextView
       android:id="@+id/fourthPlaceName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="288dp"
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:background="@drawable/textview_round"
+      android:gravity="center"
+      android:padding="10dp"
       android:text="user4"
-      android:textColor="@color/white"
-      android:textSize="25sp"
-      app:layout_constraintEnd_toEndOf="@+id/titleUser"
-      app:layout_constraintStart_toStartOf="@+id/titleUser"
-      app:layout_constraintTop_toBottomOf="@+id/title" />
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="@+id/thirdPlaceName"
+      app:layout_constraintStart_toStartOf="@+id/thirdPlaceName"
+      app:layout_constraintTop_toBottomOf="@+id/thirdPlaceName" />
 
   <TextView
       android:id="@+id/fourthPlace"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="20dp"
-      android:text="Four"
-      android:textColor="@color/white"
-      android:textSize="25sp"
-      app:layout_constraintEnd_toEndOf="@+id/titleScore"
-      app:layout_constraintStart_toStartOf="@+id/titleScore"
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:background="@drawable/textview_round"
+      android:gravity="center"
+      android:padding="10dp"
+      android:text="score4"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="@+id/thirdPlace"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toEndOf="@+id/thirdPlaceName"
       app:layout_constraintTop_toBottomOf="@+id/thirdPlace" />
 
   <TextView
       android:id="@+id/fifthPlaceName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="340dp"
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:background="@drawable/textview_round"
+      android:gravity="center"
+      android:padding="10dp"
       android:text="user5"
-      android:textColor="@color/white"
-      android:textSize="25sp"
-      app:layout_constraintEnd_toEndOf="@+id/titleUser"
-      app:layout_constraintStart_toStartOf="@+id/titleUser"
-      app:layout_constraintTop_toBottomOf="@+id/title" />
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="@+id/fourthPlaceName"
+      app:layout_constraintStart_toStartOf="@+id/fourthPlaceName"
+      app:layout_constraintTop_toBottomOf="@+id/fourthPlaceName" />
 
   <TextView
       android:id="@+id/fifthPlace"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="20dp"
-      android:text="Five"
-      android:textColor="@color/white"
-      android:textSize="25sp"
-      app:layout_constraintEnd_toEndOf="@+id/titleScore"
-      app:layout_constraintStart_toStartOf="@+id/titleScore"
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:background="@drawable/textview_round"
+      android:gravity="center"
+      android:padding="10dp"
+      android:text="score5"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="@+id/fourthPlace"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toEndOf="@+id/fourthPlaceName"
       app:layout_constraintTop_toBottomOf="@+id/fourthPlace" />
 
   <TextView
       android:id="@+id/firstPlaceName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="92dp"
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:layout_marginTop="16dp"
+      android:background="@drawable/textview_round"
+      android:gravity="center"
+      android:padding="10dp"
       android:text="user1"
-      android:textColor="@color/white"
-      android:textSize="25sp"
+      android:textSize="20sp"
       app:layout_constraintEnd_toEndOf="@+id/titleUser"
       app:layout_constraintStart_toStartOf="@+id/titleUser"
-      app:layout_constraintTop_toBottomOf="@+id/title" />
+      app:layout_constraintTop_toBottomOf="@+id/titleUser" />
 
   <TextView
       android:id="@+id/title"
-      android:layout_width="280dp"
+      android:layout_width="320dp"
       android:layout_height="0dp"
       android:layout_marginTop="60dp"
       android:background="@drawable/textview_round_brown"
@@ -174,32 +190,87 @@
 
   <TextView
       android:id="@+id/titleUser"
-      android:layout_width="100dp"
+      android:layout_width="150dp"
       android:layout_height="0dp"
-      android:layout_marginStart="20dp"
       android:layout_marginTop="36dp"
       android:background="@drawable/textview_round_green"
       android:padding="10dp"
       android:text="@string/Username"
       android:textAlignment="center"
       android:textColor="@color/white"
-      android:textSize="15sp"
+      android:textSize="20sp"
       app:layout_constraintStart_toStartOf="@+id/title"
       app:layout_constraintTop_toBottomOf="@+id/title" />
 
   <TextView
       android:id="@+id/titleScore"
-      android:layout_width="100dp"
+      android:layout_width="150dp"
       android:layout_height="0dp"
       android:layout_marginTop="36dp"
-      android:layout_marginEnd="20dp"
       android:background="@drawable/textview_round_green"
       android:padding="10dp"
       android:text="@string/Score"
       android:textAlignment="center"
       android:textColor="@color/white"
-      android:textSize="15sp"
+      android:textSize="20sp"
       app:layout_constraintEnd_toEndOf="@+id/title"
       app:layout_constraintTop_toBottomOf="@+id/title" />
+
+  <TextView
+      android:id="@+id/textView1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:gravity="center"
+      android:text="1st\nPlace"
+      android:textColor="@color/white"
+      android:textSize="18sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/titleUser" />
+
+  <TextView
+      android:id="@+id/textView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:gravity="center"
+      android:text="2nd\nPlace"
+      android:textColor="@color/white"
+      android:textSize="18sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/firstPlaceName" />
+
+  <TextView
+      android:id="@+id/textView3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="3rd\nPlace"
+      android:textColor="@color/white"
+      android:textSize="18sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/secondPlaceName" />
+
+  <TextView
+      android:id="@+id/textView4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="4th\nPlace"
+      android:textColor="@color/white"
+      android:textSize="18sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/thirdPlaceName" />
+
+  <TextView
+      android:id="@+id/textView5"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="5th\nPlace"
+      android:textColor="@color/white"
+      android:textSize="18sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/fourthPlaceName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

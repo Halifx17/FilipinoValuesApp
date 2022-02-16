@@ -27,8 +27,8 @@ public class Settings extends AppCompatActivity {
     String userID;
     String userExtra;
     String emailExtra;
-    int highScoreExtra;
-    TextView txtUser, txtEmail, txtHighScore;
+    String highScoreExtra;
+    TextView txtUser, txtEmail, txtHighScore, usernameTitle, emailTitle, scoreTitleSettings, whoops;
     Button settingsReg;
 
     @Override
@@ -47,18 +47,30 @@ public class Settings extends AppCompatActivity {
         txtUser = findViewById(R.id.username);
         txtEmail = findViewById(R.id.email);
         txtHighScore = findViewById(R.id.highScore);
+        usernameTitle = findViewById(R.id.usernameTitle);
+        emailTitle = findViewById(R.id.emailTitle);
+        scoreTitleSettings = findViewById(R.id.scoreTitleSettings);
+        whoops = findViewById(R.id.whoops);
 
 
         userExtra = getIntent().getStringExtra("username");
         emailExtra = getIntent().getStringExtra("email");
-        highScoreExtra = getIntent().getIntExtra("highScore",0);
+        highScoreExtra = getIntent().getStringExtra("highScore");
 
         if(userExtra!=null) {
 
             settingsReg.setVisibility(View.INVISIBLE);
+            whoops.setVisibility(View.INVISIBLE);
             txtUser.setText(userExtra);
             txtEmail.setText(emailExtra);
-            txtHighScore.setText(Integer.toString(highScoreExtra));
+            txtHighScore.setText(highScoreExtra);
+        }else{
+            usernameTitle.setVisibility(View.INVISIBLE);
+            emailTitle.setVisibility(View.INVISIBLE);
+            scoreTitleSettings.setVisibility(View.INVISIBLE);
+            txtUser.setVisibility(View.INVISIBLE);
+            txtEmail.setVisibility(View.INVISIBLE);
+            txtHighScore.setVisibility(View.INVISIBLE);
         }
 
 

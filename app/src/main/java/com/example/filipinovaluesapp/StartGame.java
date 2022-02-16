@@ -39,7 +39,7 @@ public class StartGame extends AppCompatActivity {
     String firstPlaceName, secondPlaceName, thirdPlaceName, fourthPlaceName, fifthPlaceName;
 
     Button startGame, howToPlay, leaderBoards;
-    int baseScore = 100000, seedOrder = 0;
+    int baseScore = 1000000, seedOrder = 0, points = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,9 @@ public class StartGame extends AppCompatActivity {
         startGame = findViewById(R.id.startGame);
         howToPlay = findViewById(R.id.howToPlay);
         leaderBoards = findViewById(R.id.Leaderboards);
+
+        howToPlay.setVisibility(View.INVISIBLE);
+
 
 
         dbReference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -182,6 +185,8 @@ public class StartGame extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent intent = new Intent(StartGame.this, three_in_one.class);
+                mAuth.signOut();
+                finish();
                 startActivity(intent);
             }
         });
@@ -324,60 +329,70 @@ public class StartGame extends AppCompatActivity {
         if(seed.get(seedOrder) == 1){
             Intent intent = new Intent(StartGame.this, Questionnaire.class);
             intent.putExtra("runningScore", baseScore);
+            intent.putExtra("points",points);
             intent.putExtra("seedOrder",seedOrder + 1);
             intent.putIntegerArrayListExtra("seed",seed);
             startActivity(intent);
         }else if(seed.get(seedOrder) == 2){
             Intent intent = new Intent(StartGame.this, Questionnaire1.class);
             intent.putExtra("runningScore", baseScore);
+            intent.putExtra("points", points);
             intent.putExtra("seedOrder",seedOrder + 1);
             intent.putIntegerArrayListExtra("seed",seed);
             startActivity(intent);
         }else if(seed.get(seedOrder) == 3){
             Intent intent = new Intent(StartGame.this, Questionnaire2.class);
             intent.putExtra("runningScore", baseScore);
+            intent.putExtra("points", points);
             intent.putExtra("seedOrder",seedOrder + 1);
             intent.putIntegerArrayListExtra("seed",seed);
             startActivity(intent);
         }else if(seed.get(seedOrder) == 4){
             Intent intent = new Intent(StartGame.this, Questionnaire3.class);
             intent.putExtra("runningScore", baseScore);
+            intent.putExtra("points", points);
             intent.putExtra("seedOrder",seedOrder + 1);
             intent.putIntegerArrayListExtra("seed",seed);
             startActivity(intent);
         }else if(seed.get(seedOrder) == 5){
             Intent intent = new Intent(StartGame.this, Questionnaire4.class);
             intent.putExtra("runningScore", baseScore);
+            intent.putExtra("points", points);
             intent.putExtra("seedOrder",seedOrder + 1);
             intent.putIntegerArrayListExtra("seed",seed);
             startActivity(intent);
         }else if(seed.get(seedOrder) == 6){
             Intent intent = new Intent(StartGame.this, Questionnaire5.class);
             intent.putExtra("runningScore", baseScore);
+            intent.putExtra("points", points);
             intent.putExtra("seedOrder",seedOrder + 1);
             intent.putIntegerArrayListExtra("seed",seed);
             startActivity(intent);
         }else if(seed.get(seedOrder) == 7){
             Intent intent = new Intent(StartGame.this, Questionnaire6.class);
             intent.putExtra("runningScore", baseScore);
+            intent.putExtra("points", points);
             intent.putExtra("seedOrder",seedOrder + 1);
             intent.putIntegerArrayListExtra("seed",seed);
             startActivity(intent);
         }else if(seed.get(seedOrder) == 8){
             Intent intent = new Intent(StartGame.this, Questionnaire7.class);
             intent.putExtra("runningScore", baseScore);
+            intent.putExtra("points", points);
             intent.putExtra("seedOrder",seedOrder + 1);
             intent.putIntegerArrayListExtra("seed",seed);
             startActivity(intent);
         }else if(seed.get(seedOrder) == 9){
             Intent intent = new Intent(StartGame.this, Questionnaire8.class);
             intent.putExtra("runningScore", baseScore);
+            intent.putExtra("points", points);
             intent.putExtra("seedOrder",seedOrder + 1);
             intent.putIntegerArrayListExtra("seed",seed);
             startActivity(intent);
         }else if(seed.get(seedOrder) == 10){
             Intent intent = new Intent(StartGame.this, Questionnaire9.class);
             intent.putExtra("runningScore", baseScore);
+            intent.putExtra("points", points);
             intent.putExtra("seedOrder",seedOrder + 1);
             intent.putIntegerArrayListExtra("seed",seed);
             startActivity(intent);

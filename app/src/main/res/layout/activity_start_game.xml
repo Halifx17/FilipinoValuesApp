@@ -30,37 +30,39 @@
         android:onClick="settingsButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_settings_24"
+        app:srcCompat="@drawable/ic_baseline_person_24"
         app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/textview_round_brown"
+        android:padding="10dp"
+        android:text="HOME"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/startGame"
         android:layout_width="300dp"
         android:layout_height="80dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="176dp"
         android:background="@drawable/tio_login"
+        android:onClick="gameStart"
         android:text="@string/StartGame"
         android:textColor="@color/white"
         android:textSize="35sp"
-        android:onClick="gameStart"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/howToPlay"
-        android:layout_width="200dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/tio_login"
-        android:text="@string/Leaderboards"
-        android:onClick="leaderBoards"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@+id/Leaderboards"
-        app:layout_constraintStart_toStartOf="@+id/Leaderboards"
-        app:layout_constraintTop_toBottomOf="@+id/Leaderboards" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Leaderboards"
@@ -68,12 +70,28 @@
         android:layout_height="35dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
-        android:text="@string/HowToPlay"
-        android:onClick="howToPlay"
+        android:onClick="leaderBoards"
+        android:text="@string/Leaderboards"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="@+id/startGame"
+        app:layout_constraintStart_toStartOf="@+id/startGame"
+        app:layout_constraintTop_toBottomOf="@+id/startGame" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/howToPlay"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/tio_login"
+        android:onClick="howToPlay"
+        android:text="@string/HowToPlay"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/startGame"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="@+id/startGame"
         app:layout_constraintTop_toBottomOf="@+id/startGame" />
 
