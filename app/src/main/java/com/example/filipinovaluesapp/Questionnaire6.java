@@ -171,7 +171,7 @@ public class Questionnaire6 extends AppCompatActivity {
         q2Choice2.setTextColor(Color.parseColor("#778899"));
         q2Choice4.getBackground().setAlpha(64);
         q2Choice4.setTextColor(Color.parseColor("#778899"));
-        answer = 1;
+        answer = 0;
         notAnswered = 0;
     }
 
@@ -183,7 +183,7 @@ public class Questionnaire6 extends AppCompatActivity {
         q2Choice3.setTextColor(Color.parseColor("#778899"));
         q2Choice2.getBackground().setAlpha(64);
         q2Choice2.setTextColor(Color.parseColor("#778899"));
-        answer = 0;
+        answer = 1;
         notAnswered = 0;
     }
 

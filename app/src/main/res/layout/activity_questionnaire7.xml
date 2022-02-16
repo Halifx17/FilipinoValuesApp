@@ -10,9 +10,13 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/Background"
         android:scaleType="fitXY"
         android:src="@drawable/bg_img"
-        android:contentDescription="@string/Background">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </ImageView>
 
@@ -30,9 +34,9 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="350dp"
-        android:layout_height="120dp"
+        android:layout_height="200dp"
         android:layout_marginTop="32dp"
-        android:text="Q7"
+        android:text="@string/Question7"
         android:textAlignment="center"
         android:background="@drawable/textview_round"
         android:padding="20dp"

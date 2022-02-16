@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class Questionnaire8 extends AppCompatActivity {
 
-    Button LetV, LetA, LetL, LetU, LetE, nextButton, resetButton;
+    Button LetK, LetA, LetR, LetM, LetÀ, nextButton, resetButton;
     TextView L1, L2, L3, L4, L5;
     int Time = 0, score = 0, answer = 0, notAnswered = 1, seedOrder = 0;
     long previousTime;
@@ -38,11 +38,11 @@ public class Questionnaire8 extends AppCompatActivity {
 
 
 
-        LetV = findViewById(R.id.V);
+        LetK = findViewById(R.id.K);
         LetA= findViewById(R.id.A);
-        LetL = findViewById(R.id.L);
-        LetU = findViewById(R.id.U);
-        LetE = findViewById(R.id.E);
+        LetR = findViewById(R.id.R);
+        LetM = findViewById(R.id.M);
+        LetÀ = findViewById(R.id.À);
 
         L1 = findViewById(R.id.FirstLetter);
         L2 = findViewById(R.id.SecondLetter);
@@ -149,26 +149,26 @@ public class Questionnaire8 extends AppCompatActivity {
     }
 
 
-    public void setOpacityV(View view) {
+    public void setOpacityK(View view) {
 
-        LetV.getBackground().setAlpha(64);
-        LetV.setTextColor(Color.parseColor("#778899"));
-        if(!L1.getText().equals("V")&&
-                !L2.getText().equals("V")&&
-                !L3.getText().equals("V")&&
-                !L4.getText().equals("V")&&
-                !L5.getText().equals("V")) {
+        LetK.getBackground().setAlpha(64);
+        LetK.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("K")&&
+                !L2.getText().equals("K")&&
+                !L3.getText().equals("K")&&
+                !L4.getText().equals("K")&&
+                !L5.getText().equals("K")) {
 
             if (L1.getText().equals("_")) {
-                L1.setText("V");
+                L1.setText("K");
             } else if (L2.getText().equals("_")) {
-                L2.setText("V");
+                L2.setText("K");
             } else if (L3.getText().equals("_")) {
-                L3.setText("V");
+                L3.setText("K");
             } else if (L4.getText().equals("_")) {
-                L4.setText("V");
+                L4.setText("K");
             } else {
-                L5.setText("V");
+                L5.setText("K");
             }
         }
     }
@@ -199,76 +199,76 @@ public class Questionnaire8 extends AppCompatActivity {
     }
 
 
-    public void setOpacityL(View view) {
+    public void setOpacityR(View view) {
 
-        LetL.getBackground().setAlpha(64);
-        LetL.setTextColor(Color.parseColor("#778899"));
-        if(!L1.getText().equals("L")&&
-                !L2.getText().equals("L")&&
-                !L3.getText().equals("L")&&
-                !L4.getText().equals("L")&&
-                !L5.getText().equals("L")) {
+        LetR.getBackground().setAlpha(64);
+        LetR.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("R")&&
+                !L2.getText().equals("R")&&
+                !L3.getText().equals("R")&&
+                !L4.getText().equals("R")&&
+                !L5.getText().equals("R")) {
 
             if (L1.getText().equals("_")) {
-                L1.setText("L");
+                L1.setText("R");
             } else if (L2.getText().equals("_")) {
-                L2.setText("L");
+                L2.setText("R");
             } else if (L3.getText().equals("_")) {
-                L3.setText("L");
+                L3.setText("R");
             } else if (L4.getText().equals("_")) {
-                L4.setText("L");
+                L4.setText("R");
             } else {
-                L5.setText("L");
+                L5.setText("R");
             }
         }
 
     }
-    public void setOpacityU(View view) {
+    public void setOpacityM(View view) {
 
-        LetU.getBackground().setAlpha(64);
-        LetU.setTextColor(Color.parseColor("#778899"));
-        if(!L1.getText().equals("U")&&
-                !L2.getText().equals("U")&&
-                !L3.getText().equals("U")&&
-                !L4.getText().equals("U")&&
-                !L5.getText().equals("U")) {
+        LetM.getBackground().setAlpha(64);
+        LetM.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("M")&&
+                !L2.getText().equals("M")&&
+                !L3.getText().equals("M")&&
+                !L4.getText().equals("M")&&
+                !L5.getText().equals("M")) {
 
             if (L1.getText().equals("_")) {
-                L1.setText("U");
+                L1.setText("M");
             } else if (L2.getText().equals("_")) {
-                L2.setText("U");
+                L2.setText("M");
             } else if (L3.getText().equals("_")) {
-                L3.setText("U");
+                L3.setText("M");
             } else if (L4.getText().equals("_")) {
-                L4.setText("U");
+                L4.setText("M");
             } else {
-                L5.setText("U");
+                L5.setText("M");
             }
         }
 
     }
 
 
-    public void setOpacityE(View view) {
+    public void setOpacityÀ(View view) {
 
-        LetE.getBackground().setAlpha(64);
-        LetE.setTextColor(Color.parseColor("#778899"));
-        if(!L1.getText().equals("E")&&
-                !L2.getText().equals("E")&&
-                !L3.getText().equals("E")&&
-                !L4.getText().equals("E")&&
-                !L5.getText().equals("E")) {
+        LetÀ.getBackground().setAlpha(64);
+        LetÀ.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("À")&&
+                !L2.getText().equals("À")&&
+                !L3.getText().equals("À")&&
+                !L4.getText().equals("À")&&
+                !L5.getText().equals("À")) {
 
             if (L1.getText().equals("_")) {
-                L1.setText("E");
+                L1.setText("À");
             } else if (L2.getText().equals("_")) {
-                L2.setText("E");
+                L2.setText("À");
             } else if (L3.getText().equals("_")) {
-                L3.setText("E");
+                L3.setText("À");
             } else if (L4.getText().equals("_")) {
-                L4.setText("E");
+                L4.setText("À");
             } else {
-                L5.setText("E");
+                L5.setText("À");
             }
         }
 
@@ -276,20 +276,20 @@ public class Questionnaire8 extends AppCompatActivity {
 
     public void resetLetters(View view) {
 
-        LetV.getBackground().setAlpha(255);
-        LetV.setTextColor(Color.parseColor("#FFFFFFFF"));
+        LetK.getBackground().setAlpha(255);
+        LetK.setTextColor(Color.parseColor("#FFFFFFFF"));
 
         LetA.getBackground().setAlpha(255);
         LetA.setTextColor(Color.parseColor("#FFFFFFFF"));
 
-        LetL.getBackground().setAlpha(255);
-        LetL.setTextColor(Color.parseColor("#FFFFFFFF"));
+        LetR.getBackground().setAlpha(255);
+        LetR.setTextColor(Color.parseColor("#FFFFFFFF"));
 
-        LetU.getBackground().setAlpha(255);
-        LetU.setTextColor(Color.parseColor("#FFFFFFFF"));
+        LetM.getBackground().setAlpha(255);
+        LetM.setTextColor(Color.parseColor("#FFFFFFFF"));
 
-        LetE.getBackground().setAlpha(255);
-        LetE.setTextColor(Color.parseColor("#FFFFFFFF"));
+        LetÀ.getBackground().setAlpha(255);
+        LetÀ.setTextColor(Color.parseColor("#FFFFFFFF"));
 
 
         L1.setText("_");
@@ -324,7 +324,7 @@ public class Questionnaire8 extends AppCompatActivity {
         }
         else if(seed.get(seedOrder) == 1){
             Intent intent = new Intent(Questionnaire8.this, Questionnaire.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -340,7 +340,7 @@ public class Questionnaire8 extends AppCompatActivity {
 
         else if(seed.get(seedOrder) == 2){
             Intent intent = new Intent(Questionnaire8.this, Questionnaire1.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -354,7 +354,7 @@ public class Questionnaire8 extends AppCompatActivity {
         }
         else if(seed.get(seedOrder) == 3){
             Intent intent = new Intent(Questionnaire8.this, Questionnaire2.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -368,7 +368,7 @@ public class Questionnaire8 extends AppCompatActivity {
         }
         else if(seed.get(seedOrder) == 4){
             Intent intent = new Intent(Questionnaire8.this, Questionnaire3.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -382,7 +382,7 @@ public class Questionnaire8 extends AppCompatActivity {
         }
         else if(seed.get(seedOrder) == 5){
             Intent intent = new Intent(Questionnaire8.this, Questionnaire4.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -396,7 +396,7 @@ public class Questionnaire8 extends AppCompatActivity {
         }
         else if(seed.get(seedOrder) == 6){
             Intent intent = new Intent(Questionnaire8.this, Questionnaire5.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -409,7 +409,7 @@ public class Questionnaire8 extends AppCompatActivity {
             startActivity(intent);
         }else if(seed.get(seedOrder) == 7){
             Intent intent = new Intent(Questionnaire8.this, Questionnaire6.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -422,7 +422,7 @@ public class Questionnaire8 extends AppCompatActivity {
             startActivity(intent);
         }else if(seed.get(seedOrder) == 8){
             Intent intent = new Intent(Questionnaire8.this, Questionnaire7.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -435,7 +435,7 @@ public class Questionnaire8 extends AppCompatActivity {
             startActivity(intent);
         }else if(seed.get(seedOrder) == 10){
             Intent intent = new Intent(Questionnaire8.this, Questionnaire9.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("KARMÀ")||txtAnswer.equals("KÀRMA")){
 
                 intent.putExtra("runningScore", score);
             }else {

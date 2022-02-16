@@ -142,7 +142,7 @@ public class Questionnaire5 extends AppCompatActivity {
         choiceThree.setTextColor(Color.parseColor("#778899"));
         choiceFour.getBackground().setAlpha(64);
         choiceFour.setTextColor(Color.parseColor("#778899"));
-        answer = 1;
+        answer = 0;
         notAnswered = 0;
     }
 
@@ -182,7 +182,7 @@ public class Questionnaire5 extends AppCompatActivity {
         choiceThree.setTextColor(Color.parseColor("#778899"));
         choiceTwo.getBackground().setAlpha(64);
         choiceTwo.setTextColor(Color.parseColor("#778899"));
-        answer = 0;
+        answer = 1;
         notAnswered = 0;
     }
 

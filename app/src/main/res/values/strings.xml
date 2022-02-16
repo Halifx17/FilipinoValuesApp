@@ -6,24 +6,43 @@
     <string name="intro4">With that all out of the way let us now start!</string>
 
 
-    <string name="Question">This word is derived from the Latin word \"valere\" which means to be worth, be strong-something intrinsically valuable, or desirable.</string>
-    <string name="Question1">This refers to the ability of Filipinos to shed light and optimism in whatever situation they are in so as to remain determined in going through struggles and challenges.</string>
-    <string name="Question2">WHICH DOES NOT BELONG.\nAll of the following are the strengths of the Filipino Character EXCEPT:</string>
-    <string name="Question3">_______ means daring to attempt difficult things that are good.\n\n C _ _ R _ _ E</string>
+    <string name="Question">Ang salitang ito ay nagmula sa salitang Latin na \"valere\" na nangangahulugang maging karapat-dapat o maging kanais-nais.</string>
+    <string name="Question1">Ito ay tumutukoy sa kakayahan ng mga Pilipino na magbigay ng liwanag at optimismo sa anumang sitwasyon nila upang manatiling determinado sa pinagdadaanan na mga pagsubok at hamon.</string>
+    <string name="Question2">ALIN ANG HINDI NABIBILANG.\nAng lahat ng sumusunod ay ang kalakasan ng Katangiang Pilipino MALIBAN SA:</string>
+    <string name="Question3">_______ ang kakayahan ng isang tao na harapin ang takot, hapdi, panganib, kawalan ng katiyakan, o intimidasyon.\n\nK _ T _ P _ _ _ _ N</string>
+    <string name="Question4">Ito ang pakiramdam ng isang malalim na paghanga sa isang tao o isang bagay na dahil sa taglay nilang mga katangian, kakayahan at mga nagawa.</string>
+    <string name="Question5">Ito ang katangian na pagiging palakaibigan, mapagbigay, at maalalahanin.</string>
+    <string name="Question6">Alin sa mga sumusunod ang HINDI kasama sa mga \"Pangunahing pangagailangan\".</string>
+    <string name="Question7">Isa ito sa pinakakilalang katangian ng mga Pilipino na tumutukoy sa pagiging palakaibigan at bukas na pagtanggap sa ating mga bisita. Kaya naman, ang mga dayuhan ay hindi lamang hanga sa kagandahan ng ating kalikasan ngunit gayundin sa pagiging pagkamagiliw ng mga Pilipino.\n\nH _ _ _ _ T _ L I _ Y</string>
+    <string name="Question8">Ito ay isang pananaw na nagsasaad na: \n\"Ang bawat aksyon ng tao ay palaging may katumbas at kabaligtarang reaksyon\".</string>
+    <string name="Question9">Ito ay nagpapahayag ng pagkakaisa ng Pilipino sa pamamagitan ng pagtutulungan bilang isang bayan.</string>
     <string name="Whoops">Whoops, there is nothing to display.</string>
 
 
     <string name="JoyAndHumor">Joy and Humor</string>
     <string name="Unselfishness">Unselfishness</string>
     <string name="SelfDiscipline">Self Discipline</string>
+    <string name="DisiPlinaSaSarili">Disiplina sa Sarili</string>
     <string name="Love">Love</string>
+    <string name="PagIbig">Pag-ibig</string>
     <string name="Flex_Adapt_Create">Flexibility, Adaptability, Creativity</string>
     <string name="Hard_work">Hard work and Industry</string>
     <string name="Faith">Faith and Religiosity</string>
     <string name="Friend">Friend Orientation</string>
     <string name="Howto">How To Play</string>
     <string name="Score">Score</string>
-
+    <string name="Kabaitan">Kabaitan</string>
+    <string name="Mapanindigan">Mapanindigan</string>
+    <string name="Pagpapasalamat">Pagpapasalamat</string>
+    <string name="Malikhain">Malikhain</string>
+    <string name="Hangin">Hangin</string>
+    <string name="Pagkain">Pagkain</string>
+    <string name="Tubig">Tubig</string>
+    <string name="Laruan">Laruan</string>
+    <string name="Pangako">Pangako</string>
+    <string name="Pagkamalikhain">Pagkamalikhain</string>
+    <string name="PagkatuonsaPamilya">Pagkatuon sa Pamilya</string>
+    <string name="BayanihanSpirit">Bayanihan Spirit</string>
 
     <string name="underscore">_</string>
     <string name="ValuesQuiz">Values Quiz</string>
@@ -51,5 +70,14 @@
     <string name="L">L</string>
     <string name="U">U</string>
     <string name="E">E</string>
+    <string name="É">É</string>
+    <string name="R">R</string>
+    <string name="P">P</string>
+    <string name="S">S</string>
+    <string name="T">T</string>
+    <string name="O">O</string>
+    <string name="K">K</string>
+    <string name="M">M</string>
+    <string name="À">À</string>
 
 </resources>

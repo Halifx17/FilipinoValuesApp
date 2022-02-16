@@ -19,8 +19,8 @@ import java.util.ArrayList;
 
 public class Questionnaire4 extends AppCompatActivity {
 
-    Button LetV, LetA, LetL, LetU, LetE, nextButton, resetButton;
-    TextView L1, L2, L3, L4, L5;
+    Button LetR, LetE, LetS, LetP, LetT, LetO, LetE2, nextButton, resetButton;
+    TextView L1, L2, L3, L4, L5, L6, L7;
     int Time = 0, score = 0, answer = 0, notAnswered = 1, seedOrder = 0;
     long previousTime;
     TextView questionNumber;
@@ -38,17 +38,22 @@ public class Questionnaire4 extends AppCompatActivity {
 
 
 
-        LetV = findViewById(R.id.V);
-        LetA= findViewById(R.id.A);
-        LetL = findViewById(R.id.L);
-        LetU = findViewById(R.id.U);
-        LetE = findViewById(R.id.E);
+        LetR = findViewById(R.id.R);
+        LetE= findViewById(R.id.E);
+        LetS = findViewById(R.id.S);
+        LetP = findViewById(R.id.P);
+        LetE2 = findViewById(R.id.E2);
+        LetT = findViewById(R.id.T);
+        LetO = findViewById(R.id.O);
+
 
         L1 = findViewById(R.id.FirstLetter);
         L2 = findViewById(R.id.SecondLetter);
         L3 = findViewById(R.id.ThirdLetter);
         L4 = findViewById(R.id.FourthLetter);
         L5 = findViewById(R.id.FifthLetter);
+        L6 = findViewById(R.id.SixthLetter);
+        L7 = findViewById(R.id.SeventhLetter);
 
         seedOrder = getIntent().getIntExtra("seedOrder",0);
         questionNumber = findViewById(R.id.questionNumber);
@@ -149,100 +154,124 @@ public class Questionnaire4 extends AppCompatActivity {
     }
 
 
-    public void setOpacityV(View view) {
+    public void setOpacityR(View view) {
 
-        LetV.getBackground().setAlpha(64);
-        LetV.setTextColor(Color.parseColor("#778899"));
-        if(!L1.getText().equals("V")&&
-                !L2.getText().equals("V")&&
-                !L3.getText().equals("V")&&
-                !L4.getText().equals("V")&&
-                !L5.getText().equals("V")) {
+        LetR.getBackground().setAlpha(64);
+        LetR.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("R")&&
+                !L2.getText().equals("R")&&
+                !L3.getText().equals("R")&&
+                !L4.getText().equals("R")&&
+                !L5.getText().equals("R")&&
+                !L6.getText().equals("R")&&
+                !L7.getText().equals("R")) {
 
             if (L1.getText().equals("_")) {
-                L1.setText("V");
+                L1.setText("R");
             } else if (L2.getText().equals("_")) {
-                L2.setText("V");
+                L2.setText("R");
             } else if (L3.getText().equals("_")) {
-                L3.setText("V");
+                L3.setText("R");
             } else if (L4.getText().equals("_")) {
-                L4.setText("V");
-            } else {
-                L5.setText("V");
+                L4.setText("R");
+            } else if(L5.getText().equals("_")){
+                L5.setText("R");
+            } else if(L6.getText().equals("_")){
+                L6.setText("R");
+            }else if(L7.getText().equals("_")){
+                L7.setText("R");
             }
         }
     }
 
 
-    public void setOpacityA(View view) {
+    public void setOpacityE2(View view) {
 
-        LetA.getBackground().setAlpha(64);
-        LetA.setTextColor(Color.parseColor("#778899"));
-        if(!L1.getText().equals("A")&&
-                !L2.getText().equals("A")&&
-                !L3.getText().equals("A")&&
-                !L4.getText().equals("A")&&
-                !L5.getText().equals("A")) {
+        LetE2.getBackground().setAlpha(64);
+        LetE2.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("É")&&
+                !L2.getText().equals("É")&&
+                !L3.getText().equals("É")&&
+                !L4.getText().equals("É")&&
+                !L5.getText().equals("É")&&
+                !L6.getText().equals("É")&&
+                !L7.getText().equals("É")) {
 
             if (L1.getText().equals("_")) {
-                L1.setText("A");
+                L1.setText("É");
             } else if (L2.getText().equals("_")) {
-                L2.setText("A");
+                L2.setText("É");
             } else if (L3.getText().equals("_")) {
-                L3.setText("A");
+                L3.setText("É");
             } else if (L4.getText().equals("_")) {
-                L4.setText("A");
-            } else {
-                L5.setText("A");
+                L4.setText("É");
+            } else if(L5.getText().equals("_")){
+                L5.setText("É");
+            } else if(L6.getText().equals("_")){
+                L6.setText("É");
+            }else if(L7.getText().equals("_")){
+                L7.setText("É");
             }
         }
     }
 
 
-    public void setOpacityL(View view) {
+    public void setOpacityS(View view) {
 
-        LetL.getBackground().setAlpha(64);
-        LetL.setTextColor(Color.parseColor("#778899"));
-        if(!L1.getText().equals("L")&&
-                !L2.getText().equals("L")&&
-                !L3.getText().equals("L")&&
-                !L4.getText().equals("L")&&
-                !L5.getText().equals("L")) {
+        LetS.getBackground().setAlpha(64);
+        LetS.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("S")&&
+                !L2.getText().equals("S")&&
+                !L3.getText().equals("S")&&
+                !L4.getText().equals("S")&&
+                !L5.getText().equals("S")&&
+                !L6.getText().equals("S")&&
+                !L7.getText().equals("S")) {
 
             if (L1.getText().equals("_")) {
-                L1.setText("L");
+                L1.setText("S");
             } else if (L2.getText().equals("_")) {
-                L2.setText("L");
+                L2.setText("S");
             } else if (L3.getText().equals("_")) {
-                L3.setText("L");
+                L3.setText("S");
             } else if (L4.getText().equals("_")) {
-                L4.setText("L");
-            } else {
-                L5.setText("L");
+                L4.setText("S");
+            } else if(L5.getText().equals("_")){
+                L5.setText("S");
+            } else if(L6.getText().equals("_")){
+                L6.setText("S");
+            }else if(L7.getText().equals("_")){
+                L7.setText("S");
             }
         }
 
     }
-    public void setOpacityU(View view) {
+    public void setOpacityP(View view) {
 
-        LetU.getBackground().setAlpha(64);
-        LetU.setTextColor(Color.parseColor("#778899"));
-        if(!L1.getText().equals("U")&&
-                !L2.getText().equals("U")&&
-                !L3.getText().equals("U")&&
-                !L4.getText().equals("U")&&
-                !L5.getText().equals("U")) {
+        LetP.getBackground().setAlpha(64);
+        LetP.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("P")&&
+                !L2.getText().equals("P")&&
+                !L3.getText().equals("P")&&
+                !L4.getText().equals("P")&&
+                !L5.getText().equals("P")&&
+                !L6.getText().equals("P")&&
+                !L7.getText().equals("P")) {
 
             if (L1.getText().equals("_")) {
-                L1.setText("U");
+                L1.setText("P");
             } else if (L2.getText().equals("_")) {
-                L2.setText("U");
+                L2.setText("P");
             } else if (L3.getText().equals("_")) {
-                L3.setText("U");
+                L3.setText("P");
             } else if (L4.getText().equals("_")) {
-                L4.setText("U");
-            } else {
-                L5.setText("U");
+                L4.setText("P");
+            } else if(L5.getText().equals("_")){
+                L5.setText("P");
+            } else if(L6.getText().equals("_")){
+                L6.setText("P");
+            }else if(L7.getText().equals("_")){
+                L7.setText("P");
             }
         }
 
@@ -257,7 +286,9 @@ public class Questionnaire4 extends AppCompatActivity {
                 !L2.getText().equals("E")&&
                 !L3.getText().equals("E")&&
                 !L4.getText().equals("E")&&
-                !L5.getText().equals("E")) {
+                !L5.getText().equals("E")&&
+                !L6.getText().equals("E")&&
+                !L7.getText().equals("E")) {
 
             if (L1.getText().equals("_")) {
                 L1.setText("E");
@@ -267,8 +298,74 @@ public class Questionnaire4 extends AppCompatActivity {
                 L3.setText("E");
             } else if (L4.getText().equals("_")) {
                 L4.setText("E");
-            } else {
+            } else if(L5.getText().equals("_")){
                 L5.setText("E");
+            } else if(L6.getText().equals("_")){
+                L6.setText("E");
+            }else if(L7.getText().equals("_")){
+                L7.setText("E");
+            }
+        }
+
+    }
+
+    public void setOpacityT(View view) {
+
+        LetT.getBackground().setAlpha(64);
+        LetT.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("T")&&
+                !L2.getText().equals("T")&&
+                !L3.getText().equals("T")&&
+                !L4.getText().equals("T")&&
+                !L5.getText().equals("T")&&
+                !L6.getText().equals("T")&&
+                !L7.getText().equals("T")) {
+
+            if (L1.getText().equals("_")) {
+                L1.setText("T");
+            } else if (L2.getText().equals("_")) {
+                L2.setText("T");
+            } else if (L3.getText().equals("_")) {
+                L3.setText("T");
+            } else if (L4.getText().equals("_")) {
+                L4.setText("T");
+            } else if(L5.getText().equals("_")){
+                L5.setText("T");
+            } else if(L6.getText().equals("_")){
+                L6.setText("T");
+            }else if(L7.getText().equals("_")){
+                L7.setText("T");
+            }
+        }
+
+    }
+
+    public void setOpacityO(View view) {
+
+        LetO.getBackground().setAlpha(64);
+        LetO.setTextColor(Color.parseColor("#778899"));
+        if(!L1.getText().equals("O")&&
+                !L2.getText().equals("O")&&
+                !L3.getText().equals("O")&&
+                !L4.getText().equals("O")&&
+                !L5.getText().equals("O")&&
+                !L6.getText().equals("O")&&
+                !L7.getText().equals("O")) {
+
+            if (L1.getText().equals("_")) {
+                L1.setText("O");
+            } else if (L2.getText().equals("_")) {
+                L2.setText("O");
+            } else if (L3.getText().equals("_")) {
+                L3.setText("O");
+            } else if (L4.getText().equals("_")) {
+                L4.setText("O");
+            } else if(L5.getText().equals("_")){
+                L5.setText("O");
+            } else if(L6.getText().equals("_")){
+                L6.setText("O");
+            }else if(L7.getText().equals("_")){
+                L7.setText("O");
             }
         }
 
@@ -276,20 +373,26 @@ public class Questionnaire4 extends AppCompatActivity {
 
     public void resetLetters(View view) {
 
-        LetV.getBackground().setAlpha(255);
-        LetV.setTextColor(Color.parseColor("#FFFFFFFF"));
+        LetR.getBackground().setAlpha(255);
+        LetR.setTextColor(Color.parseColor("#FFFFFFFF"));
 
-        LetA.getBackground().setAlpha(255);
-        LetA.setTextColor(Color.parseColor("#FFFFFFFF"));
+        LetE2.getBackground().setAlpha(255);
+        LetE2.setTextColor(Color.parseColor("#FFFFFFFF"));
 
-        LetL.getBackground().setAlpha(255);
-        LetL.setTextColor(Color.parseColor("#FFFFFFFF"));
+        LetS.getBackground().setAlpha(255);
+        LetS.setTextColor(Color.parseColor("#FFFFFFFF"));
 
-        LetU.getBackground().setAlpha(255);
-        LetU.setTextColor(Color.parseColor("#FFFFFFFF"));
+        LetP.getBackground().setAlpha(255);
+        LetP.setTextColor(Color.parseColor("#FFFFFFFF"));
 
         LetE.getBackground().setAlpha(255);
         LetE.setTextColor(Color.parseColor("#FFFFFFFF"));
+
+        LetT.getBackground().setAlpha(255);
+        LetT.setTextColor(Color.parseColor("#FFFFFFFF"));
+
+        LetO.getBackground().setAlpha(255);
+        LetO.setTextColor(Color.parseColor("#FFFFFFFF"));
 
 
         L1.setText("_");
@@ -297,6 +400,8 @@ public class Questionnaire4 extends AppCompatActivity {
         L3.setText("_");
         L4.setText("_");
         L5.setText("_");
+        L6.setText("_");
+        L7.setText("_");
 
 
     }
@@ -304,7 +409,7 @@ public class Questionnaire4 extends AppCompatActivity {
     public void nextButton(View view) {
 
         score = getIntent().getIntExtra("runningScore",0);
-        txtAnswer = (String) L1.getText()+L2.getText()+L3.getText()+L4.getText()+L5.getText();
+        txtAnswer = (String) L1.getText()+L2.getText()+L3.getText()+L4.getText()+L5.getText()+L6.getText()+L7.getText();
         ArrayList<Integer> seed = getIntent().getIntegerArrayListExtra("seed");
         seedOrder = getIntent().getIntExtra("seedOrder",0);
 
@@ -324,7 +429,7 @@ public class Questionnaire4 extends AppCompatActivity {
         }
         else if(seed.get(seedOrder) == 1){
             Intent intent = new Intent(Questionnaire4.this, Questionnaire.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("RÉSPETO")||txtAnswer.equals("RESPÉTO")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -340,7 +445,7 @@ public class Questionnaire4 extends AppCompatActivity {
 
         else if(seed.get(seedOrder) == 2){
             Intent intent = new Intent(Questionnaire4.this, Questionnaire1.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("RÉSPETO")||txtAnswer.equals("RESPÉTO")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -354,7 +459,7 @@ public class Questionnaire4 extends AppCompatActivity {
         }
         else if(seed.get(seedOrder) == 3){
             Intent intent = new Intent(Questionnaire4.this, Questionnaire2.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("RÉSPETO")||txtAnswer.equals("RESPÉTO")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -368,7 +473,7 @@ public class Questionnaire4 extends AppCompatActivity {
         }
         else if(seed.get(seedOrder) == 4){
             Intent intent = new Intent(Questionnaire4.this, Questionnaire3.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("RÉSPETO")||txtAnswer.equals("RESPÉTO")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -382,7 +487,7 @@ public class Questionnaire4 extends AppCompatActivity {
         }
         else if(seed.get(seedOrder) == 6){
             Intent intent = new Intent(Questionnaire4.this, Questionnaire5.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("RÉSPETO")||txtAnswer.equals("RESPÉTO")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -395,7 +500,7 @@ public class Questionnaire4 extends AppCompatActivity {
             startActivity(intent);
         }else if(seed.get(seedOrder) == 7){
             Intent intent = new Intent(Questionnaire4.this, Questionnaire6.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("RÉSPETO")||txtAnswer.equals("RESPÉTO")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -408,7 +513,7 @@ public class Questionnaire4 extends AppCompatActivity {
             startActivity(intent);
         }else if(seed.get(seedOrder) == 8){
             Intent intent = new Intent(Questionnaire4.this, Questionnaire7.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("RÉSPETO")||txtAnswer.equals("RESPÉTO")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -421,7 +526,7 @@ public class Questionnaire4 extends AppCompatActivity {
             startActivity(intent);
         }else if(seed.get(seedOrder) == 9){
             Intent intent = new Intent(Questionnaire4.this, Questionnaire8.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("RÉSPETO")||txtAnswer.equals("RESPÉTO")){
 
                 intent.putExtra("runningScore", score);
             }else {
@@ -434,7 +539,7 @@ public class Questionnaire4 extends AppCompatActivity {
             startActivity(intent);
         }else if(seed.get(seedOrder) == 10){
             Intent intent = new Intent(Questionnaire4.this, Questionnaire9.class);
-            if(txtAnswer.equals("VALUE")){
+            if(txtAnswer.equals("RÉSPETO")||txtAnswer.equals("RESPÉTO")){
 
                 intent.putExtra("runningScore", score);
             }else {

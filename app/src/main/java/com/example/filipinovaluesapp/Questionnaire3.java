@@ -130,7 +130,7 @@ public class Questionnaire3 extends AppCompatActivity {
         if(seedOrder+1 >= 11){
             Intent intent = new Intent(Questionnaire3.this, Score.class);
             txtAnswer = editAnswer.getText().toString().trim();
-            if (txtAnswer.equalsIgnoreCase("Courage")) {
+            if (txtAnswer.equalsIgnoreCase("Katapangan")) {
                 intent.putExtra("runningScore", score);
             } else if (notAnswered == 1) {
                 intent.putExtra("runningScore", score-2500);
@@ -147,7 +147,7 @@ public class Questionnaire3 extends AppCompatActivity {
             else if (seed.get(seedOrder) == 1) {
                 Intent intent = new Intent(Questionnaire3.this, Questionnaire.class);
                 txtAnswer = editAnswer.getText().toString().trim();
-                if (txtAnswer.equalsIgnoreCase("Courage")) {
+                if (txtAnswer.equalsIgnoreCase("Katapangan")) {
                     intent.putExtra("runningScore", score);
                 } else if (notAnswered == 1) {
                     intent.putExtra("runningScore", score-2500);
@@ -163,7 +163,7 @@ public class Questionnaire3 extends AppCompatActivity {
             } else if (seed.get(seedOrder) == 2) {
                 Intent intent = new Intent(Questionnaire3.this, Questionnaire1.class);
                 txtAnswer = editAnswer.getText().toString().trim();
-                if (txtAnswer.equalsIgnoreCase("Courage")) {
+                if (txtAnswer.equalsIgnoreCase("Katapangan")) {
                     intent.putExtra("runningScore", score);
                 } else if (notAnswered == 1) {
                     intent.putExtra("runningScore", score-2500);
@@ -180,7 +180,7 @@ public class Questionnaire3 extends AppCompatActivity {
             } else if (seed.get(seedOrder) == 3) {
                 Intent intent = new Intent(Questionnaire3.this, Questionnaire2.class);
                 txtAnswer = editAnswer.getText().toString().trim();
-                if (txtAnswer.equalsIgnoreCase("Courage")) {
+                if (txtAnswer.equalsIgnoreCase("Katapangan")) {
                     intent.putExtra("runningScore", score);
                 } else if (notAnswered == 1) {
                     intent.putExtra("runningScore", score-2500);
@@ -196,7 +196,7 @@ public class Questionnaire3 extends AppCompatActivity {
             } else if (seed.get(seedOrder) == 5) {
             Intent intent = new Intent(Questionnaire3.this, Questionnaire4.class);
             txtAnswer = editAnswer.getText().toString().trim();
-            if (txtAnswer.equalsIgnoreCase("Courage")) {
+            if (txtAnswer.equalsIgnoreCase("Katapangan")) {
                 intent.putExtra("runningScore", score);
             } else if (notAnswered == 1) {
                 intent.putExtra("runningScore", score-2500);
@@ -212,7 +212,7 @@ public class Questionnaire3 extends AppCompatActivity {
         } else if (seed.get(seedOrder) == 6) {
             Intent intent = new Intent(Questionnaire3.this, Questionnaire5.class);
             txtAnswer = editAnswer.getText().toString().trim();
-            if (txtAnswer.equalsIgnoreCase("Courage")) {
+            if (txtAnswer.equalsIgnoreCase("Katapangan")) {
                 intent.putExtra("runningScore", score);
             } else if (notAnswered == 1) {
                 intent.putExtra("runningScore", score-2500);
@@ -228,7 +228,7 @@ public class Questionnaire3 extends AppCompatActivity {
         } else if (seed.get(seedOrder) == 7) {
             Intent intent = new Intent(Questionnaire3.this, Questionnaire6.class);
             txtAnswer = editAnswer.getText().toString().trim();
-            if (txtAnswer.equalsIgnoreCase("Courage")) {
+            if (txtAnswer.equalsIgnoreCase("Katapangan")) {
                 intent.putExtra("runningScore", score);
             } else if (notAnswered == 1) {
                 intent.putExtra("runningScore", score-2500);
@@ -245,7 +245,7 @@ public class Questionnaire3 extends AppCompatActivity {
         else if (seed.get(seedOrder) == 8) {
             Intent intent = new Intent(Questionnaire3.this, Questionnaire7.class);
             txtAnswer = editAnswer.getText().toString().trim();
-            if (txtAnswer.equalsIgnoreCase("Courage")) {
+            if (txtAnswer.equalsIgnoreCase("Katapangan")) {
                 intent.putExtra("runningScore", score);
             } else if (notAnswered == 1) {
                 intent.putExtra("runningScore", score-2500);
@@ -262,7 +262,7 @@ public class Questionnaire3 extends AppCompatActivity {
         else if (seed.get(seedOrder) == 9) {
             Intent intent = new Intent(Questionnaire3.this, Questionnaire8.class);
             txtAnswer = editAnswer.getText().toString().trim();
-            if (txtAnswer.equalsIgnoreCase("Courage")) {
+            if (txtAnswer.equalsIgnoreCase("Katapangan")) {
                 intent.putExtra("runningScore", score);
             } else if (notAnswered == 1) {
                 intent.putExtra("runningScore", score-2500);
@@ -279,7 +279,7 @@ public class Questionnaire3 extends AppCompatActivity {
         else if (seed.get(seedOrder) == 10) {
             Intent intent = new Intent(Questionnaire3.this, Questionnaire9.class);
             txtAnswer = editAnswer.getText().toString().trim();
-            if (txtAnswer.equalsIgnoreCase("Courage")) {
+            if (txtAnswer.equalsIgnoreCase("Katapangan")) {
                 intent.putExtra("runningScore", score);
             } else if (notAnswered == 1) {
                 intent.putExtra("runningScore", score-2500);

@@ -10,11 +10,43 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/Background"
         android:scaleType="fitXY"
         android:src="@drawable/bg_img"
-        android:contentDescription="@string/Background">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </ImageView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/E2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/tio_login"
+        android:onClick="setOpacityE2"
+        android:text="@string/É"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@+id/P"
+        app:layout_constraintStart_toEndOf="@+id/R"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/P"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/tio_login"
+        android:onClick="setOpacityP"
+        android:text="@string/P"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/intro_title"
@@ -27,26 +59,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/U"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/tio_login"
-        android:text="@string/U"
-        android:onClick="setOpacityU"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="350dp"
         android:layout_height="120dp"
         android:layout_marginTop="32dp"
-        android:text="Question4"
+        android:text="@string/Question4"
         android:background="@drawable/textview_round"
         android:padding="20dp"
         android:textColor="@color/black"
@@ -56,144 +74,178 @@
         app:layout_constraintTop_toBottomOf="@+id/intro_title" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/V"
+        android:id="@+id/O"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/tio_login"
-        android:text="@string/V"
-        android:onClick="setOpacityV"
+        android:onClick="setOpacityO"
+        android:text="@string/O"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/U"
+        app:layout_constraintEnd_toStartOf="@+id/S"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/R"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/tio_login"
+        android:onClick="setOpacityR"
+        android:text="@string/R"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/T"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/tio_login"
+        android:onClick="setOpacityT"
+        android:text="@string/T"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/S"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/tio_login"
+        android:onClick="setOpacityS"
+        android:text="@string/S"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@+id/E2"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/E"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/tio_login"
-        android:text="@string/E"
         android:onClick="setOpacityE"
+        android:text="@string/E"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/V"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/A"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/tio_login"
-        android:text="@string/A"
-        android:onClick="setOpacityA"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/E"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/L"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/tio_login"
-        android:text="@string/L"
-        android:onClick="setOpacityL"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/A"
+        app:layout_constraintEnd_toStartOf="@+id/T"
+        app:layout_constraintStart_toEndOf="@+id/S"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/FirstLetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:text="@string/underscore"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="@+id/U"
-        app:layout_constraintStart_toStartOf="@+id/U"
-        app:layout_constraintTop_toBottomOf="@+id/U" />
+        app:layout_constraintStart_toStartOf="@+id/R"
+        app:layout_constraintTop_toBottomOf="@+id/S" />
 
     <TextView
-        android:id="@+id/SecondLetter"
+        android:id="@+id/SeventhLetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:text="@string/underscore"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="@+id/V"
-        app:layout_constraintStart_toStartOf="@+id/V"
-        app:layout_constraintTop_toBottomOf="@+id/V" />
+        app:layout_constraintEnd_toEndOf="@+id/P"
+        app:layout_constraintTop_toBottomOf="@+id/E" />
 
     <TextView
-        android:id="@+id/ThirdLetter"
+        android:id="@+id/SixthLetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
         android:text="@string/underscore"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="@+id/E"
-        app:layout_constraintStart_toStartOf="@+id/E"
+        app:layout_constraintStart_toEndOf="@+id/E2"
+        app:layout_constraintTop_toBottomOf="@+id/E" />
+
+    <TextView
+        android:id="@+id/FifthLetter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/underscore"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="@+id/S"
         app:layout_constraintTop_toBottomOf="@+id/E" />
 
     <TextView
         android:id="@+id/FourthLetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
         android:text="@string/underscore"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="@+id/A"
-        app:layout_constraintStart_toStartOf="@+id/A"
-        app:layout_constraintTop_toBottomOf="@+id/A" />
+        app:layout_constraintStart_toStartOf="@+id/E2"
+        app:layout_constraintTop_toBottomOf="@+id/S" />
 
     <TextView
-        android:id="@+id/FifthLetter"
+        android:id="@+id/ThirdLetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
         android:text="@string/underscore"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="@+id/L"
-        app:layout_constraintStart_toStartOf="@+id/L"
-        app:layout_constraintTop_toBottomOf="@+id/L" />
+        app:layout_constraintStart_toStartOf="@+id/S"
+        app:layout_constraintTop_toBottomOf="@+id/S" />
+
+    <TextView
+        android:id="@+id/SecondLetter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/underscore"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/S" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/resetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
         android:background="@drawable/questionnaire_buttons"
         android:onClick="resetLetters"
         android:text="@string/Reset"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/FirstLetter" />
+        app:layout_constraintTop_toTopOf="@+id/nextButton" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/questionnaire_buttons"
         android:onClick="nextButton"
         android:text="@string/Next"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/FifthLetter" />
+        app:layout_constraintTop_toBottomOf="@+id/FourthLetter" />
 
     <Chronometer
         android:id="@+id/chronometer"

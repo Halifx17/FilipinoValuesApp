@@ -12,7 +12,11 @@
         android:layout_height="match_parent"
         android:contentDescription="@string/Background"
         android:scaleType="fitXY"
-        android:src="@drawable/bg_img"/>
+        android:src="@drawable/bg_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/intro_title"
@@ -32,7 +36,7 @@
         android:layout_marginTop="32dp"
         android:text="@string/Question1"
         android:background="@drawable/textview_round"
-        android:padding="20dp"
+        android:padding="15dp"
         android:textColor="@color/black"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"

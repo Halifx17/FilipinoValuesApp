@@ -10,9 +10,13 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/Background"
         android:scaleType="fitXY"
         android:src="@drawable/bg_img"
-        android:contentDescription="@string/Background">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </ImageView>
 
@@ -28,17 +32,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/U"
+        android:id="@+id/M"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
-        android:text="@string/U"
-        android:onClick="setOpacityU"
+        android:onClick="setOpacityM"
+        android:text="@string/M"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
@@ -46,7 +49,7 @@
         android:layout_width="350dp"
         android:layout_height="120dp"
         android:layout_marginTop="32dp"
-        android:text="Question8"
+        android:text="@string/Question8"
         android:background="@drawable/textview_round"
         android:padding="20dp"
         android:textColor="@color/black"
@@ -56,56 +59,56 @@
         app:layout_constraintTop_toBottomOf="@+id/intro_title" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/V"
+        android:id="@+id/K"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
-        android:text="@string/V"
-        android:onClick="setOpacityV"
+        android:onClick="setOpacityK"
+        android:text="@string/K"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/U"
+        app:layout_constraintStart_toEndOf="@+id/M"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/E"
+        android:id="@+id/À"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
-        android:text="@string/E"
-        android:onClick="setOpacityE"
+        android:onClick="setOpacityÀ"
+        android:text="@string/À"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/V"
+        app:layout_constraintStart_toEndOf="@+id/K"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/A"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
-        android:text="@string/A"
         android:onClick="setOpacityA"
+        android:text="@string/A"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/E"
+        app:layout_constraintStart_toEndOf="@+id/À"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/L"
+        android:id="@+id/R"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/tio_login"
-        android:text="@string/L"
-        android:onClick="setOpacityL"
+        android:onClick="setOpacityR"
+        android:text="@string/R"
         android:textColor="@color/white"
         android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/A"
@@ -119,57 +122,53 @@
         android:text="@string/underscore"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="@+id/U"
-        app:layout_constraintStart_toStartOf="@+id/U"
-        app:layout_constraintTop_toBottomOf="@+id/U" />
+        app:layout_constraintEnd_toEndOf="@+id/M"
+        app:layout_constraintStart_toStartOf="@+id/M"
+        app:layout_constraintTop_toBottomOf="@+id/M" />
 
     <TextView
         android:id="@+id/SecondLetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:text="@string/underscore"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="@+id/V"
-        app:layout_constraintStart_toStartOf="@+id/V"
-        app:layout_constraintTop_toBottomOf="@+id/V" />
+        app:layout_constraintEnd_toEndOf="@+id/K"
+        app:layout_constraintStart_toStartOf="@+id/K"
+        app:layout_constraintTop_toTopOf="@+id/FirstLetter" />
 
     <TextView
         android:id="@+id/ThirdLetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:text="@string/underscore"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="@+id/E"
-        app:layout_constraintStart_toStartOf="@+id/E"
-        app:layout_constraintTop_toBottomOf="@+id/E" />
+        app:layout_constraintEnd_toEndOf="@+id/À"
+        app:layout_constraintStart_toStartOf="@+id/À"
+        app:layout_constraintTop_toTopOf="@+id/SecondLetter" />
 
     <TextView
         android:id="@+id/FourthLetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:text="@string/underscore"
         android:textColor="@color/white"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@+id/A"
         app:layout_constraintStart_toStartOf="@+id/A"
-        app:layout_constraintTop_toBottomOf="@+id/A" />
+        app:layout_constraintTop_toTopOf="@+id/ThirdLetter" />
 
     <TextView
         android:id="@+id/FifthLetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:text="@string/underscore"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="@+id/L"
-        app:layout_constraintStart_toStartOf="@+id/L"
-        app:layout_constraintTop_toBottomOf="@+id/L" />
+        app:layout_constraintEnd_toEndOf="@+id/R"
+        app:layout_constraintStart_toStartOf="@+id/R"
+        app:layout_constraintTop_toTopOf="@+id/FourthLetter" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/resetButton"
