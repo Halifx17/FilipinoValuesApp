@@ -220,11 +220,13 @@
       android:id="@+id/textView1"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
       android:layout_marginTop="20dp"
       android:gravity="center"
-      android:text="1st\nPlace"
+      android:text="1st"
       android:textColor="@color/white"
       android:textSize="18sp"
+      app:layout_constraintBottom_toTopOf="@+id/secondPlaceName"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/titleUser" />
 
@@ -232,11 +234,13 @@
       android:id="@+id/textView2"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
       android:layout_marginTop="8dp"
       android:gravity="center"
-      android:text="2nd\nPlace"
+      android:text="2nd"
       android:textColor="@color/white"
       android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="@+id/secondPlaceName"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/firstPlaceName" />
 
@@ -244,10 +248,12 @@
       android:id="@+id/textView3"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
       android:gravity="center"
-      android:text="3rd\nPlace"
+      android:text="3rd"
       android:textColor="@color/white"
       android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="@+id/thirdPlaceName"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/secondPlaceName" />
 
@@ -255,10 +261,12 @@
       android:id="@+id/textView4"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
       android:gravity="center"
-      android:text="4th\nPlace"
+      android:text="4th"
       android:textColor="@color/white"
       android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="@+id/fourthPlaceName"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/thirdPlaceName" />
 
@@ -266,10 +274,12 @@
       android:id="@+id/textView5"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
       android:gravity="center"
-      android:text="5th\nPlace"
+      android:text="5th"
       android:textColor="@color/white"
       android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="@+id/fifthPlaceName"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/fourthPlaceName" />
 
